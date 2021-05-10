@@ -1,11 +1,11 @@
-@import url('https://fonts.googleapis.com/css2?family=Fascinate+Inline&family=Pacifico&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Fascinate&family=Open+Sans&display=swap');
 h1,
 h2,
 h3,
 h4,
 h5,
 h6 {
-font-family: 'Fascinate Inline', cursive;
+font-family: 'Fascinate', cursive;
 font-weight: 400;
 margin: 0 0 20px 0;
 padding: 0;
@@ -15,11 +15,11 @@ color: #0e1b4d;
 
 p {
     
-    font-family: 'Pacifico', cursive;
+    font-family: 'Open Sans', sans-serif;
 }
 
 body {
-    font-family: 'Pacifico', cursive;
+    font-family: 'Open Sans', sans-serif;
    }
 
 main.bd-content #main-content a, main.bd-content #main-content a:visited {
@@ -27,10 +27,7 @@ main.bd-content #main-content a, main.bd-content #main-content a:visited {
     text-decoration: underline;
 }
 
-.prev-next-bottom a.left-prev, .prev-next-bottom a.right-next {
-    border: 2px solid #00EDFF;
-    border-radius: 50px;
-}
+
 
 
 .bd-sidebar nav ul.nav a:hover, .bd-sidebar nav ul.nav li.active>a, .bd-sidebar nav ul.nav li.active>a:hover {
