@@ -2,9 +2,11 @@
 # Learn more at https://jupyterbook.org/customize/toc.html
 #
 - file: intro
-- file: prep
+
+
 - part: Week One
   chapters:
+    - file: prep
     - file: june1
     - file: june2
     - file: june3
