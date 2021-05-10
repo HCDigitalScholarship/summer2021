@@ -1,7 +1,4 @@
-Welcome to your Jupyter Book
+Welcome to Summer 2021! 
 ============================
 
-This is a small sample book to give you a feel for how book content is
-structured.
-
-Check out the content pages bundled with this sample book to get started.
+This is a site that we'll use during the summer orientation and training. 

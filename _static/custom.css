@@ -1,0 +1,41 @@
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans&family=Open+Sans&display=swap');
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+font-family: 'Josefin Sans', sans-serif;
+font-weight: 400;
+margin: 0 0 20px 0;
+padding: 0;
+color: #0e1b4d;
+/* text-shadow: 1px 2px #54f4ff; */
+}
+
+p {
+ font-family: "Open Sans", sans-serif";   
+}
+
+body {
+    font-family: "Open Sans", sans-serif";   
+   }
+
+main.bd-content #main-content a, main.bd-content #main-content a:visited {
+    color: black;
+    text-decoration: underline;
+}
+
+.prev-next-bottom a.left-prev, .prev-next-bottom a.right-next {
+    border: 2px solid #00EDFF;
+    border-radius: 50px;
+}
+
+
+.bd-sidebar nav ul.nav a:hover, .bd-sidebar nav ul.nav li.active>a, .bd-sidebar nav ul.nav li.active>a:hover {
+    color:#015364;
+}
+
+.bd-search .icon {
+    color:#015364;
+}
