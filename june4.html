@@ -5,7 +5,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>June 4 &#8212; Digital Scholarship Summer 2021</title>
+    <title>June 4 ~ JavaScript &#8212; Digital Scholarship Summer 2021</title>
     
   <link href="_static/css/theme.css" rel="stylesheet" />
   <link href="_static/css/index.c5995385ac14fb8791e8eb36b4908be2.css" rel="stylesheet" />
@@ -53,7 +53,7 @@
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
     <link rel="next" title="June 7" href="june7.html" />
-    <link rel="prev" title="June 3" href="june3.html" />
+    <link rel="prev" title="June 3 ~ Design" href="june3.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="en" />
     
@@ -98,22 +98,22 @@
 <ul class="current nav bd-sidenav">
  <li class="toctree-l1">
   <a class="reference internal" href="june1.html">
-   June 1
+   June 1 ~ Getting Up and Running
   </a>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="june2.html">
-   June 2
+   June 2 ~ HTML/CSS
   </a>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="june3.html">
-   June 3
+   June 3 ~ Design
   </a>
  </li>
  <li class="toctree-l1 current active">
   <a class="current reference internal" href="#">
-   June 4
+   June 4 ~ JavaScript
   </a>
  </li>
 </ul>
@@ -225,6 +225,95 @@
         <!-- Table of contents -->
         <div class="d-none d-md-block col-md-2 bd-toc show">
             
+            <div class="tocsection onthispage pt-5 pb-3">
+                <i class="fas fa-list"></i> Contents
+            </div>
+            <nav id="bd-toc-nav">
+                <ul class="visible nav section-nav flex-column">
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#">
+   June 4 ~ JavaScript
+  </a>
+ </li>
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#javascript-syntax">
+   JavaScript Syntax
+  </a>
+  <ul class="visible nav section-nav flex-column">
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#there-s-a-javascript-terminal-in-your-browser">
+     There’s a JavaScript terminal in your browser
+    </a>
+   </li>
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#variables">
+     Variables
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#arrays">
+   Arrays
+  </a>
+ </li>
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#dictionaries">
+   Dictionaries
+  </a>
+  <ul class="visible nav section-nav flex-column">
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#functions">
+     Functions
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#the-dom-document-object-model">
+   The DOM (document object model)
+  </a>
+  <ul class="visible nav section-nav flex-column">
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#working-with-selected-elements">
+     Working with selected elements
+    </a>
+   </li>
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#this">
+     This
+    </a>
+   </li>
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#making-changes-to-the-dom">
+     Making changes to the DOM
+    </a>
+   </li>
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#loops">
+     Loops
+    </a>
+   </li>
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#while">
+     While
+    </a>
+   </li>
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#javascript-libraries">
+     JavaScript libraries
+    </a>
+   </li>
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#robot-chicken">
+     Robot Chicken
+    </a>
+   </li>
+  </ul>
+ </li>
+</ul>
+
+            </nav>
         </div>
     </div>
 </div>
@@ -233,8 +322,182 @@
         
               <div>
                 
-  <div class="section" id="june-4">
-<h1>June 4<a class="headerlink" href="#june-4" title="Permalink to this headline">¶</a></h1>
+  <div class="section" id="june-4-javascript">
+<h1>June 4 ~ JavaScript<a class="headerlink" href="#june-4-javascript" title="Permalink to this headline">¶</a></h1>
+</div>
+<div class="section" id="javascript-syntax">
+<h1>JavaScript Syntax<a class="headerlink" href="#javascript-syntax" title="Permalink to this headline">¶</a></h1>
+<p>Javascript is a scripting language originally designed to facilitate interactions between the user and a web page. It has since grown into a full client- and server-side scripting language, with web frameworks built entirely in Javascript like <a class="reference external" href="https://nodejs.org/en/">NodeJS</a> (including the framework for this application!).</p>
+<p>The <a class="reference external" href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Introduction">Mozilla Javascript tutorial</a> does a nice job of introducing Javascript and the kinds of things it can do, but there’s a lot!</p>
+<hr class="docutils" />
+<div class="section" id="there-s-a-javascript-terminal-in-your-browser">
+<h2>There’s a JavaScript terminal in your browser<a class="headerlink" href="#there-s-a-javascript-terminal-in-your-browser" title="Permalink to this headline">¶</a></h2>
+<p>Right-click &gt; inspect element &gt; console</p>
+<img src="https://developers.google.com/web/updates/images/2015-05-19-devtools-quickly-monitor-events-from-the-console-panel/monitor-events.gif">
+</div>
+<hr class="docutils" />
+<div class="section" id="variables">
+<h2><a class="reference external" href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Grammar_and_types#Declarations">Variables</a><a class="headerlink" href="#variables" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">let</span></code> can be reassigned.</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">let</span> <span class="pre">fish</span> <span class="pre">=</span> <span class="pre">'trout';</span></code></p></li>
+</ul>
+</li>
+<li><p><code class="docutils literal notranslate"><span class="pre">const</span></code> is constant and cannot be redefined or updated.</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">const</span> <span class="pre">fish</span> <span class="pre">=</span> <span class="pre">'trout';</span></code></p></li>
+</ul>
+</li>
+<li><p>you can also just type <code class="docutils literal notranslate"><span class="pre">fish</span> <span class="pre">=</span> <span class="pre">trout;</span></code>, but it’s best practice to use <code class="docutils literal notranslate"><span class="pre">let</span></code> or <code class="docutils literal notranslate"><span class="pre">const</span></code>.  You may also see <code class="docutils literal notranslate"><span class="pre">var</span></code> in older code (pre-2015). It’s  similar to <code class="docutils literal notranslate"><span class="pre">let</span></code>.</p></li>
+</ul>
+<hr class="docutils" />
+<p>To see the current value of your variable just type its name or type
+<code class="docutils literal notranslate"><span class="pre">console.log(x)</span></code>. It’s similar to <code class="docutils literal notranslate"><span class="pre">print(x)</span></code> in Python. You’ll see the results printed in the browser’s console tab.</p>
+<p>JavaScript is dynamically typed. For example, you can add numbers and characters.</p>
+<div class="highlight-javascript notranslate"><div class="highlight"><pre><span></span><span class="kd">let</span> <span class="nx">fish</span> <span class="o">=</span> <span class="s1">&#39;trout&#39;</span><span class="p">;</span>
+<span class="kd">let</span> <span class="nx">count</span> <span class="o">=</span> <span class="mf">200</span><span class="p">;</span>
+<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">fish</span> <span class="o">+</span> <span class="s2">&quot; &quot;</span> <span class="o">+</span> <span class="nx">count</span><span class="p">);</span>
+</pre></div>
+</div>
+</div>
+</div>
+<hr class="docutils" />
+<div class="section" id="arrays">
+<h1><a class="reference external" href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array">Arrays</a><a class="headerlink" href="#arrays" title="Permalink to this headline">¶</a></h1>
+<div class="highlight-javascript notranslate"><div class="highlight"><pre><span></span><span class="kd">let</span> <span class="nx">fishes</span> <span class="o">=</span> <span class="p">[];</span>
+<span class="nx">fishes</span><span class="p">.</span><span class="nx">push</span><span class="p">(</span><span class="s1">&#39;trout&#39;</span><span class="p">)</span>
+
+<span class="nx">fishes</span><span class="p">[</span><span class="mf">0</span><span class="p">]</span>  <span class="c1">// access values by index</span>
+</pre></div>
+</div>
+</div>
+<hr class="docutils" />
+<div class="section" id="dictionaries">
+<h1><a class="reference external" href="https://pietschsoft.com/post/2015/09/05/javascript-basics-how-to-create-a-dictionary-with-keyvalue-pairs">Dictionaries</a><a class="headerlink" href="#dictionaries" title="Permalink to this headline">¶</a></h1>
+<div class="highlight-javascript notranslate"><div class="highlight"><pre><span></span><span class="kd">var</span> <span class="nx">dict</span> <span class="o">=</span> <span class="p">{};</span>
+<span class="nx">dict</span><span class="p">[</span><span class="s2">&quot;one&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="mf">1</span><span class="p">;</span>
+
+<span class="kd">var</span> <span class="nx">one</span> <span class="o">=</span> <span class="nx">dict</span><span class="p">[</span><span class="s2">&quot;one&quot;</span><span class="p">];</span>
+</pre></div>
+</div>
+<hr class="docutils" />
+<div class="section" id="functions">
+<h2><a class="reference external" href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Functions">Functions</a><a class="headerlink" href="#functions" title="Permalink to this headline">¶</a></h2>
+<div class="highlight-javascript notranslate"><div class="highlight"><pre><span></span><span class="kd">function</span> <span class="nx">HowManyFish</span><span class="p">()</span> <span class="p">{</span> 
+    <span class="kd">let</span> <span class="nx">fishes</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;trout&#39;</span><span class="p">,</span><span class="s1">&#39;bass&#39;</span><span class="p">,</span><span class="s1">&#39;carp&#39;</span><span class="p">,</span><span class="s1">&#39;halibut&#39;</span><span class="p">]</span>
+    <span class="k">return</span> <span class="nx">fishes</span><span class="p">.</span><span class="nx">length</span>
+<span class="p">};</span>
+</pre></div>
+</div>
+<p>or better</p>
+<div class="highlight-javascript notranslate"><div class="highlight"><pre><span></span><span class="kd">let</span> <span class="nx">fishes</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;trout&#39;</span><span class="p">,</span><span class="s1">&#39;bass&#39;</span><span class="p">,</span><span class="s1">&#39;carp&#39;</span><span class="p">,</span><span class="s1">&#39;halibut&#39;</span><span class="p">];</span>
+<span class="kd">function</span> <span class="nx">HowManyFish</span><span class="p">(</span><span class="nx">fishes</span><span class="p">)</span> <span class="p">{</span> 
+    <span class="k">return</span> <span class="nx">fishes</span><span class="p">.</span><span class="nx">length</span><span class="p">;</span>
+<span class="p">};</span>
+
+<span class="nx">add_fishes</span><span class="p">(</span><span class="nx">fishes</span><span class="p">);</span> <span class="c1">// pass the array to the function</span>
+</pre></div>
+</div>
+</div>
+</div>
+<hr class="docutils" />
+<div class="section" id="the-dom-document-object-model">
+<h1><a class="reference external" href="https://developer.mozilla.org/en-US/docs/Web/API/Document">The DOM (document object model)</a><a class="headerlink" href="#the-dom-document-object-model" title="Permalink to this headline">¶</a></h1>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">document.documentURI;</span></code> // get current URI value</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">document.getElementById('my_img').src</span> <span class="pre">=</span> <span class="pre">new</span> <span class="pre">value;</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">document.getElementByClassName('fish');</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">document.getElementsByName('fish');</span></code></p></li>
+<li><p>Note that getElement returns the first result, getElements returns an array of results</p></li>
+</ul>
+<p><strong>jQuery selectors</strong></p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">$(.class)</span></code> similar to <code class="docutils literal notranslate"><span class="pre">document.getElementByClassName('class');</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">$(#id)</span></code> similar to <code class="docutils literal notranslate"><span class="pre">document.getElementByID('class');</span></code></p></li>
+</ul>
+<hr class="docutils" />
+<div class="section" id="working-with-selected-elements">
+<h2>Working with selected elements<a class="headerlink" href="#working-with-selected-elements" title="Permalink to this headline">¶</a></h2>
+<p>A selected element is an object with attributes</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">elem.value</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">elem.innerHTML</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">elem.innerText</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">elem.attribute</span></code></p></li>
+</ul>
+</div>
+<hr class="docutils" />
+<div class="section" id="this">
+<h2>This<a class="headerlink" href="#this" title="Permalink to this headline">¶</a></h2>
+<p><code class="docutils literal notranslate"><span class="pre">&lt;button</span> <span class="pre">onclick=&quot;open(this)&quot;&gt;Open&lt;/button&gt;</span></code></p>
+<div class="highlight-javascript notranslate"><div class="highlight"><pre><span></span><span class="kd">function</span> <span class="nx">open</span><span class="p">(</span><span class="nx">e</span><span class="p">){</span>
+    <span class="kd">let</span> <span class="nx">elementValue</span> <span class="o">=</span> <span class="nx">e</span><span class="p">.</span><span class="nx">innerText</span><span class="p">;</span>
+    <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">elementValue</span><span class="p">)</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<p><a class="reference external" href="https://www.w3schools.com/tags/tryit.asp?filename=tryhtml_button_test">give it a try</a></p>
+</div>
+<hr class="docutils" />
+<div class="section" id="making-changes-to-the-dom">
+<h2>Making changes to the DOM<a class="headerlink" href="#making-changes-to-the-dom" title="Permalink to this headline">¶</a></h2>
+<p>Once you have selected an element in the DOM, you can read values and set values.  This can be used to change the page without having to refresh the page or make a call to the server.</p>
+<p>For example:</p>
+<p>let’s make changes to <a class="reference external" href="https://www.cia.gov/about-cia">https://www.cia.gov/about-cia</a></p>
+<p>in the console</p>
+<div class="highlight-javascript notranslate"><div class="highlight"><pre><span></span><span class="kd">let</span> <span class="nx">element</span> <span class="o">=</span> <span class="nb">document</span><span class="p">.</span><span class="nx">getElementsByClassName</span><span class="p">(</span><span class="s1">&#39;text-holder&#39;</span><span class="p">);</span> 
+<span class="nx">element</span><span class="p">[</span><span class="mf">0</span><span class="p">].</span><span class="nx">innerText</span> <span class="o">=</span> <span class="s2">&quot;The CIA is a mass of incadesent gas a gigantic nuclear furnace.  Where hydrogen is build into helium at a temperature of millions of degrees.&quot;</span> 
+</pre></div>
+</div>
+</div>
+<hr class="docutils" />
+<div class="section" id="loops">
+<h2><a class="reference external" href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Loops_and_iteration">Loops</a><a class="headerlink" href="#loops" title="Permalink to this headline">¶</a></h2>
+<div class="highlight-javascript notranslate"><div class="highlight"><pre><span></span><span class="kd">let</span> <span class="nx">fishes</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;trout&#39;</span><span class="p">,</span><span class="s1">&#39;bass&#39;</span><span class="p">,</span><span class="s1">&#39;carp&#39;</span><span class="p">,</span><span class="s1">&#39;halibut&#39;</span><span class="p">];</span>
+<span class="kd">let</span> <span class="nx">i</span><span class="p">;</span>
+<span class="k">for</span> <span class="p">(</span><span class="nx">i</span> <span class="o">=</span> <span class="mf">0</span><span class="p">;</span> <span class="nx">i</span> <span class="o">&lt;</span> <span class="nx">fishes</span><span class="p">.</span><span class="nx">length</span><span class="p">;</span> <span class="nx">i</span><span class="o">++</span><span class="p">)</span> <span class="p">{</span>
+  <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s1">&#39;I like: &#39;</span> <span class="o">+</span><span class="nx">fishes</span><span class="p">[</span><span class="nx">i</span><span class="p">]);</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<p><a class="reference external" href="https://www.w3schools.com/js/tryit.asp?filename=tryjs_loop_for">give it a try</a></p>
+</div>
+<hr class="docutils" />
+<div class="section" id="while">
+<h2><a class="reference external" href="https://www.w3schools.com/js/js_loop_while.asp">While</a><a class="headerlink" href="#while" title="Permalink to this headline">¶</a></h2>
+<div class="highlight-javascript notranslate"><div class="highlight"><pre><span></span><span class="kd">let</span> <span class="nx">i</span> <span class="o">=</span> <span class="mf">0</span><span class="p">;</span>
+<span class="k">do</span> <span class="p">{</span>
+  <span class="nx">i</span> <span class="o">+=</span> <span class="mf">1</span><span class="p">;</span>
+  <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">i</span><span class="p">);</span>
+<span class="p">}</span> <span class="k">while</span> <span class="p">(</span><span class="nx">i</span> <span class="o">&lt;</span> <span class="mf">5</span><span class="p">);</span>
+</pre></div>
+</div>
+</div>
+<hr class="docutils" />
+<div class="section" id="javascript-libraries">
+<h2>JavaScript libraries<a class="headerlink" href="#javascript-libraries" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li><p>JavaScript code can be imported from a file <code class="docutils literal notranslate"><span class="pre">&lt;script</span> <span class="pre">src=&quot;displaydate.js&quot;</span> <span class="pre">type=&quot;text/javascript&quot;&gt;&lt;/script&gt;</span></code></p></li>
+<li><p>Or a CDN or external source <code class="docutils literal notranslate"><span class="pre">&lt;script</span> <span class="pre">src=&quot;https://cdn.jsdelivr.net/npm/p5&#64;1.1.9/lib/p5.js&quot;&gt;&lt;/script&gt;</span></code></p></li>
+</ul>
+</div>
+<div class="section" id="robot-chicken">
+<h2>Robot Chicken<a class="headerlink" href="#robot-chicken" title="Permalink to this headline">¶</a></h2>
+<p>The following is a creative coding exercise to help you become familiar with the <a class="reference external" href="https://p5js.org/">p5.js</a> library.</p>
+<ul class="simple">
+<li><p><a class="reference external" href="https://p5js.org/reference/">P5 reference</a></p></li>
+<li><p>Using the <a class="reference external" href="https://editor.p5js.org/">p5.js editor</a></p></li>
+<li><p><a class="reference external" href="https://aatishb.com/stc209/slides.html">Slides</a></p></li>
+<li><p><a class="reference external" href="https://editor.p5js.org/bulbil/sketches/YkzH6niu5">give it a try</a></p></li>
+<li><p><a class="reference external" href="https://editor.p5js.org/ajanco&#64;haverford.edu/sketches/wgMel_OQ">Go game</a></p></li>
+<li><p><a class="reference external" href="https://github.com/Princeton-CDH/playingwithdata/raw/master/p5%20playing%20with%20data%20workshop%20handout.pdf">Robot Chicken exercise</a></p></li>
+<li><p><a class="reference external" href="https://editor.p5js.org/slcruz/sketches/b2uP4YSNu">Simple animation</a></p></li>
+<li><p><a class="reference external" href="https://editor.p5js.org/slcruz/sketches/005jy4zME">Plotting data</a></p></li>
+<li><p><a class="reference external" href="https://editor.p5js.org/slcruz/sketches/mCzhpwQ_7">Stripes visualization</a></p></li>
+</ul>
+<p>This section is based on the <a class="reference external" href="https://github.com/Princeton-CDH/playingwithdata">P5.js workshop</a> at Princeton’s Center for Digital Humanities. Many thanks to the Princeton CDH for sharing these materials and for organizing a remarkable workshop!</p>
+</div>
 </div>
 
     <script type="text/x-thebe-config">
@@ -262,7 +525,7 @@
         
         <div class='prev-next-bottom'>
             
-    <a class='left-prev' id="prev-link" href="june3.html" title="previous page">June 3</a>
+    <a class='left-prev' id="prev-link" href="june3.html" title="previous page">June 3 ~ Design</a>
     <a class='right-next' id="next-link" href="june7.html" title="next page">June 7</a>
 
         </div>
