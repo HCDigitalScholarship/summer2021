@@ -5,7 +5,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>June 8 &#8212; Digital Scholarship Summer 2021</title>
+    <title>June 8 ~ Forms &#8212; Digital Scholarship Summer 2021</title>
     
   <link href="_static/css/theme.css" rel="stylesheet" />
   <link href="_static/css/index.c5995385ac14fb8791e8eb36b4908be2.css" rel="stylesheet" />
@@ -52,8 +52,8 @@
     <script async="async" src="_static/sphinx-thebe.js"></script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
-    <link rel="next" title="June 9" href="june9.html" />
-    <link rel="prev" title="June 7" href="june7.html" />
+    <link rel="next" title="June 9 ~ Django ORM" href="june9.html" />
+    <link rel="prev" title="June 7 ~ Request/Response" href="june7.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="en" />
     
@@ -125,22 +125,22 @@
 <ul class="current nav bd-sidenav">
  <li class="toctree-l1">
   <a class="reference internal" href="june7.html">
-   June 7
+   June 7 ~ Request/Response
   </a>
  </li>
  <li class="toctree-l1 current active">
   <a class="current reference internal" href="#">
-   June 8
+   June 8 ~ Forms
   </a>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="june9.html">
-   June 9
+   June 9 ~ Django ORM
   </a>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="june10.html">
-   June 10
+   June 10 ~ Deployment
   </a>
  </li>
 </ul>
@@ -225,6 +225,29 @@
         <!-- Table of contents -->
         <div class="d-none d-md-block col-md-2 bd-toc show">
             
+            <div class="tocsection onthispage pt-5 pb-3">
+                <i class="fas fa-list"></i> Contents
+            </div>
+            <nav id="bd-toc-nav">
+                <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#get-form">
+   GET Form
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#post-form">
+   POST Form
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#django-forms">
+   Django Forms
+  </a>
+ </li>
+</ul>
+
+            </nav>
         </div>
     </div>
 </div>
@@ -233,8 +256,196 @@
         
               <div>
                 
-  <div class="section" id="june-8">
-<h1>June 8<a class="headerlink" href="#june-8" title="Permalink to this headline">¶</a></h1>
+  <div class="section" id="june-8-forms">
+<h1>June 8 ~ Forms<a class="headerlink" href="#june-8-forms" title="Permalink to this headline">¶</a></h1>
+<p><a class="reference external" href="https://www.w3schools.com/html/html_forms.asp">w3schools</a>
+<a class="reference external" href="https://docs.djangoproject.com/en/3.0/topics/forms/">Django docs forms</a></p>
+<div class="highlight-html notranslate"><div class="highlight"><pre><span></span><span class="p">&lt;</span><span class="nt">form</span><span class="p">&gt;</span>
+  <span class="p">&lt;</span><span class="nt">label</span> <span class="na">for</span><span class="o">=</span><span class="s">&quot;fname&quot;</span><span class="p">&gt;</span>First name:<span class="p">&lt;/</span><span class="nt">label</span><span class="p">&gt;&lt;</span><span class="nt">br</span><span class="p">&gt;</span>
+  <span class="p">&lt;</span><span class="nt">input</span> <span class="na">type</span><span class="o">=</span><span class="s">&quot;text&quot;</span> <span class="na">id</span><span class="o">=</span><span class="s">&quot;fname&quot;</span> <span class="na">name</span><span class="o">=</span><span class="s">&quot;fname&quot;</span><span class="p">&gt;&lt;</span><span class="nt">br</span><span class="p">&gt;</span>
+  <span class="p">&lt;</span><span class="nt">label</span> <span class="na">for</span><span class="o">=</span><span class="s">&quot;lname&quot;</span><span class="p">&gt;</span>Last name:<span class="p">&lt;/</span><span class="nt">label</span><span class="p">&gt;&lt;</span><span class="nt">br</span><span class="p">&gt;</span>
+  <span class="p">&lt;</span><span class="nt">input</span> <span class="na">type</span><span class="o">=</span><span class="s">&quot;text&quot;</span> <span class="na">id</span><span class="o">=</span><span class="s">&quot;lname&quot;</span> <span class="na">name</span><span class="o">=</span><span class="s">&quot;lname&quot;</span><span class="p">&gt;</span>
+<span class="p">&lt;/</span><span class="nt">form</span><span class="p">&gt;</span>
+</pre></div>
+</div>
+<div class="section" id="get-form">
+<h2>GET Form<a class="headerlink" href="#get-form" title="Permalink to this headline">¶</a></h2>
+<div class="highlight-html notranslate"><div class="highlight"><pre><span></span><span class="p">&lt;</span><span class="nt">form</span> <span class="na">method</span><span class="o">=</span><span class="s">&quot;get&quot;</span><span class="p">&gt;</span>
+  <span class="p">&lt;</span><span class="nt">label</span> <span class="na">for</span><span class="o">=</span><span class="s">&quot;fname&quot;</span><span class="p">&gt;</span>First name:<span class="p">&lt;/</span><span class="nt">label</span><span class="p">&gt;&lt;</span><span class="nt">br</span><span class="p">&gt;</span>
+  <span class="p">&lt;</span><span class="nt">input</span> <span class="na">type</span><span class="o">=</span><span class="s">&quot;text&quot;</span> <span class="na">id</span><span class="o">=</span><span class="s">&quot;fname&quot;</span> <span class="na">name</span><span class="o">=</span><span class="s">&quot;fname&quot;</span> <span class="na">value</span><span class="o">=</span><span class="s">&quot;John&quot;</span><span class="p">&gt;&lt;</span><span class="nt">br</span><span class="p">&gt;</span>
+  <span class="p">&lt;</span><span class="nt">label</span> <span class="na">for</span><span class="o">=</span><span class="s">&quot;lname&quot;</span><span class="p">&gt;</span>Last name:<span class="p">&lt;/</span><span class="nt">label</span><span class="p">&gt;&lt;</span><span class="nt">br</span><span class="p">&gt;</span>
+  <span class="p">&lt;</span><span class="nt">input</span> <span class="na">type</span><span class="o">=</span><span class="s">&quot;text&quot;</span> <span class="na">id</span><span class="o">=</span><span class="s">&quot;lname&quot;</span> <span class="na">name</span><span class="o">=</span><span class="s">&quot;lname&quot;</span> <span class="na">value</span><span class="o">=</span><span class="s">&quot;Doe&quot;</span><span class="p">&gt;</span>
+  <span class="p">&lt;</span><span class="nt">input</span> <span class="na">type</span><span class="o">=</span><span class="s">&quot;submit&quot;</span> <span class="na">value</span><span class="o">=</span><span class="s">&quot;Submit&quot;</span><span class="p">&gt;</span>
+<span class="p">&lt;/</span><span class="nt">form</span><span class="p">&gt;</span>
+</pre></div>
+</div>
+<p><em>note the GET requests in the logs</em></p>
+<p>add to def index(request):</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">if</span> <span class="n">request</span><span class="o">.</span><span class="n">GET</span><span class="p">:</span>
+    <span class="n">context</span> <span class="o">=</span> <span class="p">{}</span>
+    <span class="n">first_name</span> <span class="o">=</span> <span class="n">request</span><span class="o">.</span><span class="n">GET</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;fname&#39;</span><span class="p">,</span> <span class="kc">None</span><span class="p">)</span>
+    <span class="n">last_name</span> <span class="o">=</span> <span class="n">request</span><span class="o">.</span><span class="n">GET</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;lname&#39;</span><span class="p">,</span> <span class="kc">None</span><span class="p">)</span>
+    <span class="n">context</span><span class="p">[</span><span class="s1">&#39;message&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="sa">f</span><span class="s2">&quot;Hello </span><span class="si">{</span><span class="n">first_name</span><span class="si">}</span><span class="s2"> </span><span class="si">{</span><span class="n">last_name</span><span class="si">}</span><span class="s2">&quot;</span>
+    <span class="k">return</span> <span class="n">render</span><span class="p">(</span><span class="n">request</span><span class="p">,</span> <span class="s1">&#39;index.html&#39;</span><span class="p">,</span> <span class="n">context</span><span class="p">)</span>
+<span class="k">else</span><span class="p">:</span>
+    <span class="k">return</span> <span class="n">render</span><span class="p">(</span><span class="n">request</span><span class="p">,</span> <span class="s2">&quot;index.html&quot;</span><span class="p">,)</span>
+</pre></div>
+</div>
+<p>add to index.html</p>
+<div class="highlight-html notranslate"><div class="highlight"><pre><span></span><span class="p">&lt;</span><span class="nt">script</span><span class="p">&gt;</span>
+    <span class="p">{</span><span class="o">%</span> <span class="k">if</span> <span class="nx">message</span><span class="o">%</span><span class="p">}</span>
+    <span class="nx">alert</span><span class="p">(</span><span class="s1">&#39;{{ message }}&#39;</span><span class="p">);</span>
+    <span class="p">{</span><span class="o">%</span> <span class="nx">endif</span> <span class="o">%</span><span class="p">}</span>
+<span class="p">&lt;/</span><span class="nt">script</span><span class="p">&gt;</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="post-form">
+<h2>POST Form<a class="headerlink" href="#post-form" title="Permalink to this headline">¶</a></h2>
+<p>change <code class="docutils literal notranslate"><span class="pre">index.html</span></code></p>
+<div class="highlight-html notranslate"><div class="highlight"><pre><span></span><span class="p">&lt;</span><span class="nt">form</span> <span class="na">method</span><span class="o">=</span><span class="s">&quot;post&quot;</span><span class="p">&gt;</span>
+{% csrf_token%}
+...
+<span class="p">&lt;/</span><span class="nt">form</span><span class="p">&gt;</span>
+</pre></div>
+</div>
+<p>change <code class="docutils literal notranslate"><span class="pre">views.py</span></code>
+change GET to POST</p>
+<hr>
+<h2>GET vs. POST</h2>
+<p>The following table compares the two HTTP methods: GET and POST.</p>
+<div class="w3-responsive">
+<table class="w3-table-all notranslate">
+  <tr>
+    <th style="width:30%">&nbsp;</th>
+    <th style="width:35%">GET</th>
+    <th>POST</th>
+  </tr>
+  <tr>
+    <td>BACK button/Reload</td>
+    <td>Harmless</td>
+    <td>Data will be re-submitted (the browser should alert the user that the data are about to be re-submitted)</td>
+  </tr>
+  <tr>
+    <td>Bookmarked</td>
+    <td>Can be bookmarked</td>
+    <td>Cannot be bookmarked</td>
+  </tr>
+  <tr>
+    <td>Cached</td>
+    <td>Can be cached</td>
+    <td>Not cached</td>
+  </tr>
+  <tr>
+    <td>Encoding type</td>
+    <td>application/x-www-form-urlencoded</td>
+    <td>application/x-www-form-urlencoded or multipart/form-data. Use multipart encoding for binary data</td>
+  </tr>
+  <tr>
+    <td>History</td>
+    <td>Parameters remain in browser history</td>
+    <td>Parameters are not saved in browser history</td>
+  </tr>
+  <tr>
+    <td>Restrictions on data length</td>
+    <td>Yes, when sending data, the GET method adds the data to the URL; and the length of a URL is limited (maximum URL length is 2048 characters)</td>
+    <td>No restrictions</td>
+  </tr>
+  <tr>
+    <td>Restrictions on data type</td>
+    <td>Only ASCII characters allowed</td>
+    <td>No restrictions. Binary data is also allowed</td>
+  </tr>
+  <tr>
+    <td>Security</td>
+    <td>GET is less secure compared to POST because data sent is part of the URL<br>
+ <br>
+ Never use GET when sending passwords or other sensitive information!</td>
+    <td>POST is a little safer than GET because the parameters are not stored in browser history or in web server logs</td>
+  </tr>
+  <tr>
+    <td>Visibility</td>
+    <td>Data is visible to everyone in the URL</td>
+    <td>Data is not displayed in the URL</td>
+  </tr>
+  </table>
+</div>
+<a href="https://www.w3schools.com/tags/ref_httpmethods.asp">src</a>
+<hr>
+</div>
+<div class="section" id="django-forms">
+<h2>Django Forms<a class="headerlink" href="#django-forms" title="Permalink to this headline">¶</a></h2>
+<p><code class="docutils literal notranslate"><span class="pre">create</span> <span class="pre">a</span> <span class="pre">new</span> <span class="pre">file</span> <span class="pre">former_app/forms.py</span></code></p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">django</span> <span class="kn">import</span> <span class="n">forms</span>
+
+<span class="k">class</span> <span class="nc">NameForm</span><span class="p">(</span><span class="n">forms</span><span class="o">.</span><span class="n">Form</span><span class="p">):</span>
+    <span class="n">first_name</span> <span class="o">=</span> <span class="n">forms</span><span class="o">.</span><span class="n">CharField</span><span class="p">(</span><span class="n">label</span><span class="o">=</span><span class="s1">&#39;first_name&#39;</span><span class="p">,</span> <span class="n">max_length</span><span class="o">=</span><span class="mi">100</span><span class="p">)</span>
+    <span class="n">last_name</span> <span class="o">=</span> <span class="n">forms</span><span class="o">.</span><span class="n">CharField</span><span class="p">(</span><span class="n">label</span><span class="o">=</span><span class="s1">&#39;last_name&#39;</span><span class="p">,</span> <span class="n">max_length</span><span class="o">=</span><span class="mi">100</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>now edit <code class="docutils literal notranslate"><span class="pre">views.py</span></code></p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">former_app.forms</span> <span class="kn">import</span> <span class="n">NameForm</span>
+
+<span class="k">def</span> <span class="nf">index</span><span class="p">(</span><span class="n">request</span><span class="p">):</span>
+    <span class="k">if</span> <span class="n">request</span><span class="o">.</span><span class="n">POST</span><span class="p">:</span>
+        <span class="n">form</span> <span class="o">=</span> <span class="n">NameForm</span><span class="p">(</span><span class="n">request</span><span class="o">.</span><span class="n">POST</span><span class="p">)</span>
+        <span class="k">if</span> <span class="n">form</span><span class="o">.</span><span class="n">is_valid</span><span class="p">():</span>
+          <span class="n">context</span> <span class="o">=</span> <span class="p">{}</span>
+          <span class="n">context</span><span class="p">[</span><span class="s1">&#39;form&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">form</span>
+          <span class="n">first_name</span> <span class="o">=</span> <span class="n">form</span><span class="o">.</span><span class="n">cleaned_data</span><span class="p">[</span><span class="s1">&#39;first_name&#39;</span><span class="p">]</span>
+          <span class="n">last_name</span> <span class="o">=</span> <span class="n">form</span><span class="o">.</span><span class="n">cleaned_data</span><span class="p">[</span><span class="s1">&#39;last_name&#39;</span><span class="p">]</span>
+          <span class="n">context</span><span class="p">[</span><span class="s1">&#39;message&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="sa">f</span><span class="s2">&quot;Hello </span><span class="si">{</span><span class="n">first_name</span><span class="si">}</span><span class="s2"> </span><span class="si">{</span><span class="n">last_name</span><span class="si">}</span><span class="s2">&quot;</span>
+          <span class="k">return</span> <span class="n">render</span><span class="p">(</span><span class="n">request</span><span class="p">,</span> <span class="s1">&#39;index.html&#39;</span><span class="p">,</span> <span class="n">context</span><span class="p">)</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="n">form</span> <span class="o">=</span> <span class="n">NameForm</span><span class="p">()</span>
+        <span class="k">return</span> <span class="n">render</span><span class="p">(</span><span class="n">request</span><span class="p">,</span> <span class="s2">&quot;index.html&quot;</span><span class="p">,</span> <span class="p">{</span><span class="s2">&quot;form&quot;</span><span class="p">:</span> <span class="n">form</span><span class="p">})</span>
+</pre></div>
+</div>
+<p>now edit <code class="docutils literal notranslate"><span class="pre">index.html</span></code></p>
+<div class="highlight-html notranslate"><div class="highlight"><pre><span></span><span class="p">&lt;</span><span class="nt">form</span> <span class="na">method</span><span class="o">=</span><span class="s">&quot;post&quot;</span><span class="p">&gt;</span>
+{% csrf_token%}
+  {{ form }}
+  <span class="p">&lt;</span><span class="nt">input</span> <span class="na">type</span><span class="o">=</span><span class="s">&quot;submit&quot;</span> <span class="na">value</span><span class="o">=</span><span class="s">&quot;Submit&quot;</span><span class="p">&gt;</span>
+<span class="p">&lt;/</span><span class="nt">form</span><span class="p">&gt;</span>
+</pre></div>
+</div>
+<p>more on <a class="reference external" href="https://docs.djangoproject.com/en/3.0/topics/forms/">Django forms</a></p>
+<hr class="docutils" />
+<img src="https://target.scene7.com/is/image/Target/GUEST_4c383d0d-52f3-4190-adad-00dd21163e7f?wid=488&hei=488&fmt=pjpeg">
+<ul class="simple">
+<li><p>Mad Libs is a game where you fill in missing words.  The player is asked to name an “adjective” or “verb.”  The response is placed in the text to create funny stories.</p></li>
+<li><p>Use the marked-up text below</p></li>
+</ul>
+<div class="highlight-html notranslate"><div class="highlight"><pre><span></span><span class="p">&lt;</span><span class="nt">p</span><span class="p">&gt;</span>A vacation is when you take a trip to some <span class="p">&lt;</span><span class="nt">span</span> <span class="na">id</span><span class="o">=</span><span class="s">&quot;1&quot;</span> <span class="na">class</span><span class="o">=</span><span class="s">&quot;adjective&quot;</span><span class="p">&gt;&lt;/</span><span class="nt">span</span><span class="p">&gt;</span> place
+with your <span class="p">&lt;</span><span class="nt">span</span> <span class="na">id</span><span class="o">=</span><span class="s">&quot;2&quot;</span> <span class="na">class</span><span class="o">=</span><span class="s">&quot;adjective&quot;</span><span class="p">&gt;&lt;/</span><span class="nt">span</span><span class="p">&gt;</span> family. Usually you go to some place
+that is near a/an <span class="p">&lt;</span><span class="nt">span</span> <span class="na">id</span><span class="o">=</span><span class="s">&quot;3&quot;</span> <span class="na">class</span><span class="o">=</span><span class="s">&quot;noun&quot;</span><span class="p">&gt;&lt;/</span><span class="nt">span</span><span class="p">&gt;</span> or up on a/an <span class="p">&lt;</span><span class="nt">span</span> <span class="na">id</span><span class="o">=</span><span class="s">&quot;4&quot;</span> <span class="na">class</span><span class="o">=</span><span class="s">&quot;noun&quot;</span><span class="p">&gt;&lt;/</span><span class="nt">span</span><span class="p">&gt;</span>.
+A good vacation place is one where you can ride <span class="p">&lt;</span><span class="nt">span</span> <span class="na">id</span><span class="o">=</span><span class="s">&quot;5&quot;</span> <span class="na">class</span><span class="o">=</span><span class="s">&quot;plural_noun&quot;</span><span class="p">&gt;&lt;/</span><span class="nt">span</span><span class="p">&gt;</span>
+or play <span class="p">&lt;</span><span class="nt">span</span> <span class="na">id</span><span class="o">=</span><span class="s">&quot;6&quot;</span> <span class="na">class</span><span class="o">=</span><span class="s">&quot;game&quot;</span><span class="p">&gt;&lt;/</span><span class="nt">span</span><span class="p">&gt;</span> or go hunting for <span class="p">&lt;</span><span class="nt">span</span> <span class="na">id</span><span class="o">=</span><span class="s">&quot;7&quot;</span> <span class="na">class</span><span class="o">=</span><span class="s">&quot;plural_noun&quot;</span><span class="p">&gt;&lt;/</span><span class="nt">span</span><span class="p">&gt;</span>. I like
+to spend my time <span class="p">&lt;</span><span class="nt">span</span> <span class="na">id</span><span class="o">=</span><span class="s">&quot;8&quot;</span> <span class="na">class</span><span class="o">=</span><span class="s">&quot;ing_verb&quot;</span><span class="p">&gt;&lt;/</span><span class="nt">span</span><span class="p">&gt;</span> or <span class="p">&lt;</span><span class="nt">span</span> <span class="na">id</span><span class="o">=</span><span class="s">&quot;9&quot;</span> <span class="na">class</span><span class="o">=</span><span class="s">&quot;ing_verb&quot;</span><span class="p">&gt;&lt;/</span><span class="nt">span</span><span class="p">&gt;</span>.
+When parents go on a vacation, they spend their time eating
+three <span class="p">&lt;</span><span class="nt">span</span> <span class="na">id</span><span class="o">=</span><span class="s">&quot;10&quot;</span> <span class="na">class</span><span class="o">=</span><span class="s">&quot;plural_noun&quot;</span><span class="p">&gt;&lt;/</span><span class="nt">span</span><span class="p">&gt;</span> a day, and fathers play golf, and mothers
+sit around <span class="p">&lt;</span><span class="nt">span</span> <span class="na">id</span><span class="o">=</span><span class="s">&quot;11&quot;</span> <span class="na">class</span><span class="o">=</span><span class="s">&quot;ing_verb&quot;</span><span class="p">&gt;&lt;/</span><span class="nt">span</span><span class="p">&gt;</span>. Last summer, my little brother
+fell in a/an <span class="p">&lt;</span><span class="nt">span</span> <span class="na">id</span><span class="o">=</span><span class="s">&quot;12&quot;</span> <span class="na">class</span><span class="o">=</span><span class="s">&quot;noun&quot;</span><span class="p">&gt;&lt;/</span><span class="nt">span</span><span class="p">&gt;</span> and got poison <span class="p">&lt;</span><span class="nt">span</span> <span class="na">id</span><span class="o">=</span><span class="s">&quot;13&quot;</span> <span class="na">class</span><span class="o">=</span><span class="s">&quot;plant&quot;</span><span class="p">&gt;&lt;/</span><span class="nt">span</span><span class="p">&gt;</span> all
+over his<span class="p">&lt;</span><span class="nt">span</span> <span class="na">id</span><span class="o">=</span><span class="s">&quot;14&quot;</span> <span class="na">class</span><span class="o">=</span><span class="s">&quot;body_part&quot;</span><span class="p">&gt;&lt;/</span><span class="nt">span</span><span class="p">&gt;</span>. My family is going to go to (the)
+<span class="p">&lt;</span><span class="nt">span</span> <span class="na">id</span><span class="o">=</span><span class="s">&quot;15&quot;</span> <span class="na">class</span><span class="o">=</span><span class="s">&quot;place&quot;</span><span class="p">&gt;&lt;/</span><span class="nt">span</span><span class="p">&gt;</span>, and I will practice <span class="p">&lt;</span><span class="nt">span</span> <span class="na">id</span><span class="o">=</span><span class="s">&quot;16&quot;</span> <span class="na">class</span><span class="o">=</span><span class="s">&quot;ing_verb&quot;</span><span class="p">&gt;&lt;/</span><span class="nt">span</span><span class="p">&gt;</span>. Parents
+need vacations more than kids because parents are always very
+<span class="p">&lt;</span><span class="nt">span</span> <span class="na">id</span><span class="o">=</span><span class="s">&quot;17&quot;</span> <span class="na">class</span><span class="o">=</span><span class="s">&quot;adjective&quot;</span><span class="p">&gt;&lt;/</span><span class="nt">span</span><span class="p">&gt;</span> and because they have to work <span class="p">&lt;</span><span class="nt">span</span> <span class="na">id</span><span class="o">=</span><span class="s">&quot;18&quot;</span> <span class="na">class</span><span class="o">=</span><span class="s">&quot;number&quot;</span><span class="p">&gt;&lt;/</span><span class="nt">span</span><span class="p">&gt;</span>
+hours every day all year making enough <span class="p">&lt;</span><span class="nt">span</span> <span class="na">id</span><span class="o">=</span><span class="s">&quot;19&quot;</span> <span class="na">class</span><span class="o">=</span><span class="s">&quot;plural_noun&quot;</span><span class="p">&gt;&lt;/</span><span class="nt">span</span><span class="p">&gt;</span> to pay
+for the vacation.<span class="p">&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
+</pre></div>
+</div>
+<p><a class="reference external" href="http://www.madlibs.com/content/uploads/2016/04/VacationFun_ML_2009_pg15.pdf">src</a></p>
+<ul class="simple">
+<li><p>Using Beautifulsoup, Javascript, jQuery or pure Python, extract the id values from the spans to create a list of values.
+For example <code class="docutils literal notranslate"><span class="pre">spans</span> <span class="pre">=</span> <span class="pre">[&quot;adjective&quot;,&quot;adjective&quot;,&quot;noun&quot;...]</span></code> or <code class="docutils literal notranslate"><span class="pre">spans</span> <span class="pre">=</span> <span class="pre">{&quot;1&quot;:&quot;adjective&quot;,</span> <span class="pre">&quot;2&quot;:&quot;adjective&quot;,</span> <span class="pre">&quot;3&quot;:&quot;noun&quot;}</span></code></p></li>
+<li><p>create a form with a field for each span with a label for the part of speech<br />
+<em>hint</em> <a class="reference external" href="https://www.w3schools.com/tags/tag_label.asp">field label</a></p></li>
+<li><p>serve the form to a template</p></li>
+<li><p>fill the spans in the text with the user’s form responses.</p></li>
+<li><p>return the completed mad lib to the user</p></li>
+</ul>
+<p>You can form teams or work on this alone. Ask for help at any time. You have until next Monday to complete the app. We will then look at all the entries and vote on our favorite as a group.</p>
+</div>
 </div>
 
     <script type="text/x-thebe-config">
@@ -262,8 +473,8 @@
         
         <div class='prev-next-bottom'>
             
-    <a class='left-prev' id="prev-link" href="june7.html" title="previous page">June 7</a>
-    <a class='right-next' id="next-link" href="june9.html" title="next page">June 9</a>
+    <a class='left-prev' id="prev-link" href="june7.html" title="previous page">June 7 ~ Request/Response</a>
+    <a class='right-next' id="next-link" href="june9.html" title="next page">June 9 ~ Django ORM</a>
 
         </div>
         

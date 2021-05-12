@@ -5,7 +5,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>June 7 &#8212; Digital Scholarship Summer 2021</title>
+    <title>June 7 ~ Request/Response &#8212; Digital Scholarship Summer 2021</title>
     
   <link href="_static/css/theme.css" rel="stylesheet" />
   <link href="_static/css/index.c5995385ac14fb8791e8eb36b4908be2.css" rel="stylesheet" />
@@ -52,7 +52,7 @@
     <script async="async" src="_static/sphinx-thebe.js"></script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
-    <link rel="next" title="June 8" href="june8.html" />
+    <link rel="next" title="June 8 ~ Forms" href="june8.html" />
     <link rel="prev" title="June 4 ~ JavaScript" href="june4.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="en" />
@@ -125,22 +125,22 @@
 <ul class="current nav bd-sidenav">
  <li class="toctree-l1 current active">
   <a class="current reference internal" href="#">
-   June 7
+   June 7 ~ Request/Response
   </a>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="june8.html">
-   June 8
+   June 8 ~ Forms
   </a>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="june9.html">
-   June 9
+   June 9 ~ Django ORM
   </a>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="june10.html">
-   June 10
+   June 10 ~ Deployment
   </a>
  </li>
 </ul>
@@ -225,6 +225,65 @@
         <!-- Table of contents -->
         <div class="d-none d-md-block col-md-2 bd-toc show">
             
+            <div class="tocsection onthispage pt-5 pb-3">
+                <i class="fas fa-list"></i> Contents
+            </div>
+            <nav id="bd-toc-nav">
+                <ul class="visible nav section-nav flex-column">
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#">
+   June 7 ~ Request/Response
+  </a>
+  <ul class="visible nav section-nav flex-column">
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#berkeley-sockets">
+     Berkeley Sockets
+    </a>
+   </li>
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#requests">
+     Requests
+    </a>
+    <ul class="nav section-nav flex-column">
+     <li class="toc-h3 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#request-types">
+       Request types
+      </a>
+     </li>
+    </ul>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#types-of-response">
+   Types of Response
+  </a>
+  <ul class="visible nav section-nav flex-column">
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#response">
+     Response
+    </a>
+   </li>
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#plaintextresponse">
+     PlainTextResponse
+    </a>
+   </li>
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#htmlresponse">
+     HTMLResponse
+    </a>
+   </li>
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#html-templates">
+     HTML Templates
+    </a>
+   </li>
+  </ul>
+ </li>
+</ul>
+
+            </nav>
         </div>
     </div>
 </div>
@@ -233,8 +292,230 @@
         
               <div>
                 
-  <div class="section" id="june-7">
-<h1>June 7<a class="headerlink" href="#june-7" title="Permalink to this headline">¶</a></h1>
+  <div class="section" id="june-7-request-response">
+<h1>June 7 ~ Request/Response<a class="headerlink" href="#june-7-request-response" title="Permalink to this headline">¶</a></h1>
+<hr class="docutils" />
+<img src="bboard.jpg">
+<hr class="docutils" />
+<img src="dns-via-home-router2.jpg">
+<hr class="docutils" />
+<div class="section" id="berkeley-sockets">
+<h2>Berkeley Sockets<a class="headerlink" href="#berkeley-sockets" title="Permalink to this headline">¶</a></h2>
+<p>Berkeley sockets is an industry standard Application Programming Interface (API) to create and use sockets. It was initially used as an API for the Unix operating system and was later adopted by TCP/IP.</p>
+<p>Berkeley defines 18 standard function names for this purpose.
+<img alt="" src="https://microchip.wikidot.com/local--files/tcpip:berkeley-sockets/berkeley.JPG" /></p>
+<p>The <strong>socket()</strong> function creates a socket on the host.
+The <strong>bind()</strong> function is typically used on the server side and assigns a socket to its local IP address and port number. Connect() is typically used on the client side. It creates a socket and also attempts to establish a TCP or UDP connection with a server.
+Send(),recv() and write(),read() are used to send and receive the messages to and from the socket. <a class="reference external" href="https://microchipdeveloper.com/com4104:berkeley-sockets">(source)</a></p>
+<hr class="docutils" />
+<p>Sockets are connections between two computers.<br />
+Python <a class="reference external" href="https://docs.python.org/3/library/socket.html">sockets library</a></p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">socket</span>
+
+<span class="n">mysock</span> <span class="o">=</span> <span class="n">socket</span><span class="o">.</span><span class="n">socket</span><span class="p">(</span><span class="n">socket</span><span class="o">.</span><span class="n">AF_INET</span><span class="p">,</span> <span class="n">socket</span><span class="o">.</span><span class="n">SOCK_STREAM</span><span class="p">)</span>
+<span class="n">mysock</span><span class="o">.</span><span class="n">connect</span><span class="p">((</span><span class="s1">&#39;info.cern.ch&#39;</span><span class="p">,</span> <span class="mi">80</span><span class="p">))</span>
+<span class="n">cmd</span> <span class="o">=</span> <span class="s1">&#39;GET http://info.cern.ch/hypertext/WWW/TheProject.html HTTP/1.0</span><span class="se">\r\n\r\n</span><span class="s1">&#39;</span><span class="o">.</span><span class="n">encode</span><span class="p">()</span>
+<span class="n">mysock</span><span class="o">.</span><span class="n">send</span><span class="p">(</span><span class="n">cmd</span><span class="p">)</span>
+
+<span class="k">while</span> <span class="kc">True</span><span class="p">:</span>
+    <span class="n">data</span> <span class="o">=</span> <span class="n">mysock</span><span class="o">.</span><span class="n">recv</span><span class="p">(</span><span class="mi">512</span><span class="p">)</span>
+    <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">data</span><span class="p">)</span> <span class="o">&lt;</span> <span class="mi">1</span><span class="p">:</span>
+        <span class="k">break</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">data</span><span class="o">.</span><span class="n">decode</span><span class="p">(),</span><span class="n">end</span><span class="o">=</span><span class="s1">&#39;&#39;</span><span class="p">)</span>
+
+<span class="n">mysock</span><span class="o">.</span><span class="n">close</span><span class="p">()</span>
+</pre></div>
+</div>
+<p><a class="reference external" href="https://www.dj4e.com/code/http/client1.py">(src)</a><br />
+<a class="reference external" href="https://docs.python.org/2/library/socket.html">AF_INET?</a> A single string is used for the AF_UNIX address family. A pair (host, port) is used for the AF_INET address family, where host is a string representing either a hostname in Internet domain notation like ‘<a class="reference external" href="http://daring.cwi.nl">daring.cwi.nl</a>’ or an IPv4 address like ‘100.50.200.5’, and port is an integer.</p>
+<hr class="docutils" />
+<p><img alt="" src="https://mdn.mozillademos.org/files/13687/HTTP_Request.png" /></p>
+<div class="highlight-html notranslate"><div class="highlight"><pre><span></span>GET http://info.cern.ch/hypertext/WWW/TheProject.html HTTP/1.0
+</pre></div>
+</div>
+<hr class="docutils" />
+<p><img alt="" src="https://mdn.mozillademos.org/files/13691/HTTP_Response.png" /></p>
+<p><a class="reference external" href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Status">Status codes</a></p>
+<hr class="docutils" />
+<p>More on sockets:</p>
+<p><a class="reference external" href="https://docs.python.org/3/howto/sockets.html">https://docs.python.org/3/howto/sockets.html</a><br />
+<a class="reference external" href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Overview">https://developer.mozilla.org/en-US/docs/Web/HTTP/Overview</a></p>
+</div>
+<div class="section" id="requests">
+<h2>Requests<a class="headerlink" href="#requests" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="request-types">
+<h3>Request types<a class="headerlink" href="#request-types" title="Permalink to this headline">¶</a></h3>
+<p>The GET method requests a representation of the specified resource. Requests using GET should only retrieve data.</p>
+<p><strong>simple request</strong></p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">requests</span>
+<span class="n">response</span> <span class="o">=</span> <span class="n">requests</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;http://www.gutenberg.org/cache/epub/250/pg250.txt&quot;</span><span class="p">)</span>
+<span class="k">if</span> <span class="n">response</span><span class="o">.</span><span class="n">status_code</span> <span class="o">==</span> <span class="mi">200</span><span class="p">:</span> 
+    <span class="n">headers</span> <span class="o">=</span> <span class="n">response</span><span class="o">.</span><span class="n">headers</span>
+    <span class="n">text</span> <span class="o">=</span> <span class="n">response</span><span class="o">.</span><span class="n">text</span>
+    <span class="n">binary</span> <span class="o">=</span> <span class="n">response</span><span class="o">.</span><span class="n">content</span> 
+    <span class="n">json</span> <span class="o">=</span> <span class="n">response</span><span class="o">.</span><span class="n">json</span><span class="p">()</span>
+</pre></div>
+</div>
+<p><strong>request with argument</strong></p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">response</span> <span class="o">=</span> <span class="n">requests</span><span class="o">.</span><span class="n">get</span><span class="p">(</span>
+    <span class="s1">&#39;https://api.github.com/search/repositories&#39;</span><span class="p">,</span>
+    <span class="n">params</span><span class="o">=</span><span class="p">{</span><span class="s1">&#39;q&#39;</span><span class="p">:</span> <span class="s1">&#39;requests+language:python&#39;</span><span class="p">},</span>
+<span class="p">)</span>
+<span class="n">response</span><span class="o">.</span><span class="n">json</span><span class="p">()</span>
+</pre></div>
+</div>
+<p>same as get request in the browser <a class="reference external" href="https://api.github.com/search/repositories?q=requests+language:python"><code class="docutils literal notranslate"><span class="pre">https://api.github.com/search/repositories?q=requests+language:python</span></code></a></p>
+<p>The POST method is used to submit an entity to the specified resource, often causing a change in state or side effects on the server.</p>
+<p><a class="reference external" href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Methods">https://developer.mozilla.org/en-US/docs/Web/HTTP/Methods</a></p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">requests</span><span class="o">.</span><span class="n">post</span><span class="p">(</span><span class="s1">&#39;https://httpbin.org/post&#39;</span><span class="p">,</span> <span class="n">data</span><span class="o">=</span><span class="p">{</span><span class="s1">&#39;key&#39;</span><span class="p">:</span><span class="s1">&#39;value&#39;</span><span class="p">})</span>
+<span class="n">requests</span><span class="o">.</span><span class="n">put</span><span class="p">(</span><span class="s1">&#39;https://httpbin.org/put&#39;</span><span class="p">,</span> <span class="n">data</span><span class="o">=</span><span class="p">{</span><span class="s1">&#39;key&#39;</span><span class="p">:</span><span class="s1">&#39;value&#39;</span><span class="p">})</span>
+<span class="n">requests</span><span class="o">.</span><span class="n">delete</span><span class="p">(</span><span class="s1">&#39;https://httpbin.org/delete&#39;</span><span class="p">)</span>
+<span class="n">requests</span><span class="o">.</span><span class="n">head</span><span class="p">(</span><span class="s1">&#39;https://httpbin.org/get&#39;</span><span class="p">)</span>
+<span class="n">requests</span><span class="o">.</span><span class="n">patch</span><span class="p">(</span><span class="s1">&#39;https://httpbin.org/patch&#39;</span><span class="p">,</span> <span class="n">data</span><span class="o">=</span><span class="p">{</span><span class="s1">&#39;key&#39;</span><span class="p">:</span><span class="s1">&#39;value&#39;</span><span class="p">})</span>
+<span class="n">requests</span><span class="o">.</span><span class="n">options</span><span class="p">(</span><span class="s1">&#39;https://httpbin.org/get&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+<hr class="docutils" />
+<iframe style="width:100%;height:100%" src="https://httpbin.org/"></iframe>
+<hr class="docutils" />
+<p>More on Requests</p>
+<p><a class="reference external" href="https://realpython.com/python-requests/">https://realpython.com/python-requests/</a></p>
+</div>
+</div>
+</div>
+<div class="section" id="types-of-response">
+<h1>Types of Response<a class="headerlink" href="#types-of-response" title="Permalink to this headline">¶</a></h1>
+<hr class="docutils" />
+<div class="section" id="response">
+<h2><a class="reference external" href="https://fastapi.tiangolo.com/advanced/custom-response/#response">Response</a><a class="headerlink" href="#response" title="Permalink to this headline">¶</a></h2>
+<p>The main Response class, all the other responses inherit from it.</p>
+<p><code class="docutils literal notranslate"><span class="pre">content</span> <span class="pre">-</span> <span class="pre">A</span> <span class="pre">str</span> <span class="pre">or</span> <span class="pre">bytes.</span></code><br />
+<code class="docutils literal notranslate"><span class="pre">status_code</span> <span class="pre">-</span> <span class="pre">An</span> <span class="pre">int</span> <span class="pre">HTTP</span> <span class="pre">status</span> <span class="pre">code.</span></code><br />
+<code class="docutils literal notranslate"><span class="pre">headers</span> <span class="pre">-</span> <span class="pre">A</span> <span class="pre">dict</span> <span class="pre">of</span> <span class="pre">strings.</span></code><br />
+<code class="docutils literal notranslate"><span class="pre">media_type</span> <span class="pre">-</span> <span class="pre">A</span> <span class="pre">str</span> <span class="pre">giving</span> <span class="pre">the</span> <span class="pre">media</span> <span class="pre">type.</span> <span class="pre">E.g.</span> <span class="pre">&quot;text/html&quot;.</span></code></p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">fastapi</span> <span class="kn">import</span> <span class="n">FastAPI</span><span class="p">,</span> <span class="n">Response</span>
+
+<span class="n">app</span> <span class="o">=</span> <span class="n">FastAPI</span><span class="p">()</span>
+
+
+<span class="nd">@app</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;/legacy/&quot;</span><span class="p">)</span>
+<span class="k">def</span> <span class="nf">get_legacy_data</span><span class="p">():</span>
+    <span class="n">data</span> <span class="o">=</span> <span class="s2">&quot;&quot;&quot;&lt;?xml version=&quot;1.0&quot;?&gt;</span>
+<span class="s2">    &lt;shampoo&gt;</span>
+<span class="s2">    &lt;Header&gt;</span>
+<span class="s2">        Apply shampoo here.</span>
+<span class="s2">    &lt;/Header&gt;</span>
+<span class="s2">    &lt;Body&gt;</span>
+<span class="s2">        You&#39;ll have to use soap here.</span>
+<span class="s2">    &lt;/Body&gt;</span>
+<span class="s2">    &lt;/shampoo&gt;</span>
+<span class="s2">    &quot;&quot;&quot;</span>
+    <span class="k">return</span> <span class="n">Response</span><span class="p">(</span><span class="n">content</span><span class="o">=</span><span class="n">data</span><span class="p">,</span> <span class="n">media_type</span><span class="o">=</span><span class="s2">&quot;application/xml&quot;</span><span class="p">)</span> 
+</pre></div>
+</div>
+<p><a class="reference external" href="https://www.iana.org/assignments/media-types/media-types.xhtml">full list of media types</a></p>
+</div>
+<hr class="docutils" />
+<div class="section" id="plaintextresponse">
+<h2>PlainTextResponse<a class="headerlink" href="#plaintextresponse" title="Permalink to this headline">¶</a></h2>
+<p>Takes some text or bytes and returns an plain text response.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">fastapi</span> <span class="kn">import</span> <span class="n">FastAPI</span>
+<span class="kn">from</span> <span class="nn">fastapi.responses</span> <span class="kn">import</span> <span class="n">PlainTextResponse</span>
+
+<span class="n">app</span> <span class="o">=</span> <span class="n">FastAPI</span><span class="p">()</span>
+
+<span class="nd">@app</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;/&quot;</span><span class="p">,</span> <span class="n">response_class</span><span class="o">=</span><span class="n">PlainTextResponse</span><span class="p">)</span>
+<span class="k">async</span> <span class="k">def</span> <span class="nf">main</span><span class="p">():</span>
+    <span class="k">return</span> <span class="s2">&quot;Hello World&quot;</span>
+</pre></div>
+</div>
+</div>
+<hr class="docutils" />
+<div class="section" id="htmlresponse">
+<h2>HTMLResponse<a class="headerlink" href="#htmlresponse" title="Permalink to this headline">¶</a></h2>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">fastapi</span> <span class="kn">import</span> <span class="n">FastAPI</span>
+<span class="kn">from</span> <span class="nn">fastapi.responses</span> <span class="kn">import</span> <span class="n">HTMLResponse</span>
+
+<span class="n">app</span> <span class="o">=</span> <span class="n">FastAPI</span><span class="p">()</span>
+
+
+<span class="nd">@app</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;/items/&quot;</span><span class="p">,</span> <span class="n">response_class</span><span class="o">=</span><span class="n">HTMLResponse</span><span class="p">)</span>
+<span class="k">async</span> <span class="k">def</span> <span class="nf">read_items</span><span class="p">():</span>
+    <span class="k">return</span> <span class="s2">&quot;&quot;&quot;</span>
+<span class="s2">    &lt;html&gt;</span>
+<span class="s2">        &lt;head&gt;</span>
+<span class="s2">            &lt;title&gt;Some HTML in here&lt;/title&gt;</span>
+<span class="s2">        &lt;/head&gt;</span>
+<span class="s2">        &lt;body&gt;</span>
+<span class="s2">            &lt;h1&gt;Look ma! HTML!&lt;/h1&gt;</span>
+<span class="s2">        &lt;/body&gt;</span>
+<span class="s2">    &lt;/html&gt;</span>
+<span class="s2">    &quot;&quot;&quot;</span>
+</pre></div>
+</div>
+</div>
+<hr class="docutils" />
+<div class="section" id="html-templates">
+<h2><a class="reference external" href="https://fastapi.tiangolo.com/advanced/templates/">HTML Templates</a><a class="headerlink" href="#html-templates" title="Permalink to this headline">¶</a></h2>
+<p>While it is possible to write the HTML by hands, more often, we create a template that is automatically updated.<br />
+This provides</p>
+<ul class="simple">
+<li><p>consistent styling and formatting</p></li>
+<li><p>allows use of a templating language such as <a class="reference external" href="https://jinja.palletsprojects.com/en/2.11.x/">Jinja</a></p></li>
+</ul>
+<div class="highlight-html notranslate"><div class="highlight"><pre><span></span><span class="p">&lt;</span><span class="nt">title</span><span class="p">&gt;</span>{% block title %}{% endblock %}<span class="p">&lt;/</span><span class="nt">title</span><span class="p">&gt;</span>
+<span class="p">&lt;</span><span class="nt">ul</span><span class="p">&gt;</span>
+{% for user in users %}
+  <span class="p">&lt;</span><span class="nt">li</span><span class="p">&gt;&lt;</span><span class="nt">a</span> <span class="na">href</span><span class="o">=</span><span class="s">&quot;{{ user.url }}&quot;</span><span class="p">&gt;</span>{{ user.username }}<span class="p">&lt;/</span><span class="nt">a</span><span class="p">&gt;&lt;/</span><span class="nt">li</span><span class="p">&gt;</span>
+{% endfor %}
+<span class="p">&lt;/</span><span class="nt">ul</span><span class="p">&gt;</span>
+</pre></div>
+</div>
+<p><code class="docutils literal notranslate"><span class="pre">{%</span> <span class="pre">...</span> <span class="pre">%}</span></code> is a programming statement<br />
+<code class="docutils literal notranslate"><span class="pre">{{</span> <span class="pre">...</span> <span class="pre">}}</span></code> is a variable expression<br />
+<code class="docutils literal notranslate"><span class="pre">{{</span> <span class="pre">foo.bar</span> <span class="pre">}}</span></code> or <code class="docutils literal notranslate"><span class="pre">{{</span> <span class="pre">foo['bar']</span> <span class="pre">}}</span></code> accesses an attribute of the data passed to the template</p>
+<hr class="docutils" />
+<p>You can add conditions: <code class="docutils literal notranslate"><span class="pre">{%</span> <span class="pre">if</span> <span class="pre">foo</span> <span class="pre">%}&lt;p&gt;Foo!&lt;/p&gt;{%</span> <span class="pre">endif</span> <span class="pre">%}</span></code><br />
+You can add loops: <code class="docutils literal notranslate"><span class="pre">{%</span> <span class="pre">for</span> <span class="pre">fish</span> <span class="pre">in</span> <span class="pre">fishes%}&lt;p&gt;{{</span> <span class="pre">fish</span> <span class="pre">}}&lt;/p&gt;{%</span> <span class="pre">endfor</span> <span class="pre">%}</span></code></p>
+<ol class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">pip</span> <span class="pre">install</span> <span class="pre">Jinja2</span></code></p></li>
+<li><p>create a <code class="docutils literal notranslate"><span class="pre">templates</span></code> directory</p></li>
+<li><p>in <code class="docutils literal notranslate"><span class="pre">templates</span></code> create a <code class="docutils literal notranslate"><span class="pre">base.html</span></code> and <code class="docutils literal notranslate"><span class="pre">index.html</span></code> template</p></li>
+</ol>
+<hr class="docutils" />
+<p><strong><a class="reference external" href="http://main.py">main.py</a></strong></p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">fastapi</span> <span class="kn">import</span> <span class="n">FastAPI</span><span class="p">,</span> <span class="n">Request</span>
+<span class="kn">from</span> <span class="nn">fastapi.responses</span> <span class="kn">import</span> <span class="n">HTMLResponse</span>
+<span class="kn">from</span> <span class="nn">fastapi.staticfiles</span> <span class="kn">import</span> <span class="n">StaticFiles</span>
+<span class="kn">from</span> <span class="nn">fastapi.templating</span> <span class="kn">import</span> <span class="n">Jinja2Templates</span>
+
+<span class="n">app</span> <span class="o">=</span> <span class="n">FastAPI</span><span class="p">()</span>
+
+<span class="n">app</span><span class="o">.</span><span class="n">mount</span><span class="p">(</span><span class="s2">&quot;/static&quot;</span><span class="p">,</span> <span class="n">StaticFiles</span><span class="p">(</span><span class="n">directory</span><span class="o">=</span><span class="s2">&quot;static&quot;</span><span class="p">),</span> <span class="n">name</span><span class="o">=</span><span class="s2">&quot;static&quot;</span><span class="p">)</span>
+
+<span class="n">templates</span> <span class="o">=</span> <span class="n">Jinja2Templates</span><span class="p">(</span><span class="n">directory</span><span class="o">=</span><span class="s2">&quot;templates&quot;</span><span class="p">)</span>
+
+<span class="nd">@app</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;/greeting/</span><span class="si">{name}</span><span class="s2">&quot;</span><span class="p">,</span> <span class="n">response_class</span><span class="o">=</span><span class="n">HTMLResponse</span><span class="p">)</span>
+<span class="k">async</span> <span class="k">def</span> <span class="nf">read_item</span><span class="p">(</span><span class="n">request</span><span class="p">:</span> <span class="n">Request</span><span class="p">,</span> <span class="n">name</span><span class="p">:</span> <span class="nb">str</span><span class="p">):</span>
+    <span class="n">context</span> <span class="o">=</span> <span class="p">{}</span>
+    <span class="n">context</span><span class="p">[</span><span class="s1">&#39;request&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">request</span>
+    <span class="n">context</span><span class="p">[</span><span class="s1">&#39;greeting&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="sa">f</span><span class="s2">&quot;Hello </span><span class="si">{</span><span class="n">name</span><span class="si">}</span><span class="s2">!&quot;</span>
+    <span class="k">return</span> <span class="n">templates</span><span class="o">.</span><span class="n">TemplateResponse</span><span class="p">(</span><span class="s2">&quot;index.html&quot;</span><span class="p">,</span> <span class="n">context</span><span class="p">)</span>
+</pre></div>
+</div>
+<hr class="docutils" />
+<p><strong>index.html</strong></p>
+<div class="highlight-html notranslate"><div class="highlight"><pre><span></span> <span class="p">&lt;</span><span class="nt">html</span><span class="p">&gt;</span>
+        <span class="p">&lt;</span><span class="nt">head</span><span class="p">&gt;</span>
+            <span class="p">&lt;</span><span class="nt">title</span><span class="p">&gt;</span>The Title<span class="p">&lt;/</span><span class="nt">title</span><span class="p">&gt;</span>
+        <span class="p">&lt;/</span><span class="nt">head</span><span class="p">&gt;</span>
+        <span class="p">&lt;</span><span class="nt">body</span><span class="p">&gt;</span>
+            <span class="p">&lt;</span><span class="nt">h1</span><span class="p">&gt;</span>{{ greeting }}<span class="p">&lt;/</span><span class="nt">h1</span><span class="p">&gt;</span>
+        <span class="p">&lt;/</span><span class="nt">body</span><span class="p">&gt;</span>
+    <span class="p">&lt;/</span><span class="nt">html</span><span class="p">&gt;</span>
+</pre></div>
+</div>
+</div>
 </div>
 
     <script type="text/x-thebe-config">
@@ -263,7 +544,7 @@
         <div class='prev-next-bottom'>
             
     <a class='left-prev' id="prev-link" href="june4.html" title="previous page">June 4 ~ JavaScript</a>
-    <a class='right-next' id="next-link" href="june8.html" title="next page">June 8</a>
+    <a class='right-next' id="next-link" href="june8.html" title="next page">June 8 ~ Forms</a>
 
         </div>
         

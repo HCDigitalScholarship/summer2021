@@ -5,7 +5,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>June 9 &#8212; Digital Scholarship Summer 2021</title>
+    <title>June 9 ~ Django ORM &#8212; Digital Scholarship Summer 2021</title>
     
   <link href="_static/css/theme.css" rel="stylesheet" />
   <link href="_static/css/index.c5995385ac14fb8791e8eb36b4908be2.css" rel="stylesheet" />
@@ -52,8 +52,8 @@
     <script async="async" src="_static/sphinx-thebe.js"></script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
-    <link rel="next" title="June 10" href="june10.html" />
-    <link rel="prev" title="June 8" href="june8.html" />
+    <link rel="next" title="June 10 ~ Deployment" href="june10.html" />
+    <link rel="prev" title="June 8 ~ Forms" href="june8.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="en" />
     
@@ -125,22 +125,22 @@
 <ul class="current nav bd-sidenav">
  <li class="toctree-l1">
   <a class="reference internal" href="june7.html">
-   June 7
+   June 7 ~ Request/Response
   </a>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="june8.html">
-   June 8
+   June 8 ~ Forms
   </a>
  </li>
  <li class="toctree-l1 current active">
   <a class="current reference internal" href="#">
-   June 9
+   June 9 ~ Django ORM
   </a>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="june10.html">
-   June 10
+   June 10 ~ Deployment
   </a>
  </li>
 </ul>
@@ -225,6 +225,77 @@
         <!-- Table of contents -->
         <div class="d-none d-md-block col-md-2 bd-toc show">
             
+            <div class="tocsection onthispage pt-5 pb-3">
+                <i class="fas fa-list"></i> Contents
+            </div>
+            <nav id="bd-toc-nav">
+                <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#the-journey-of-a-web-request-in-django">
+   The Journey of a Web Request in Django
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#create-a-new-django-project">
+   Create a new Django project
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#urls">
+   URLS
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#views">
+   Views
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#models">
+   Models
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#adding-data">
+   Adding Data
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#manage-py-commands">
+   Manage.py commands
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#further-reading">
+   Further Reading
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#title-13-python-and-databases-may-27-pm-description-how-to-work-with-databases-with-the-django-orm-or-tortoise-orm-models-py-prev-chapter12-next-chapter14-type-chapter-id-13">
+   title: ‘13 Python and Databases (May 27 PM)’
+description:
+“How to work with databases with the Django ORM or Tortoise ORM. models.py”
+prev: /chapter12
+next: /chapter14
+type: chapter
+id: 13
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#relational-database-design">
+     Relational Database Design
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#sql">
+     SQL
+    </a>
+   </li>
+  </ul>
+ </li>
+</ul>
+
+            </nav>
         </div>
     </div>
 </div>
@@ -233,8 +304,199 @@
         
               <div>
                 
-  <div class="section" id="june-9">
-<h1>June 9<a class="headerlink" href="#june-9" title="Permalink to this headline">¶</a></h1>
+  <div class="section" id="june-9-django-orm">
+<h1>June 9 ~ Django ORM<a class="headerlink" href="#june-9-django-orm" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="the-journey-of-a-web-request-in-django">
+<h2>The Journey of a Web Request in Django<a class="headerlink" href="#the-journey-of-a-web-request-in-django" title="Permalink to this headline">¶</a></h2>
+<iframe width="100%" height="500" src="https://www.youtube.com/embed/RLo9RJhbOrQ" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+</div>
+<div class="section" id="create-a-new-django-project">
+<h2>Create a new Django project<a class="headerlink" href="#create-a-new-django-project" title="Permalink to this headline">¶</a></h2>
+<p>In the virtual environment <code class="docutils literal notranslate"><span class="pre">pip</span> <span class="pre">install</span> <span class="pre">django</span></code>.  If you need a specific version <code class="docutils literal notranslate"><span class="pre">pip</span> <span class="pre">install</span> <span class="pre">django==2.0.1</span></code></p>
+<ul class="simple">
+<li><p>Create a new Django project with <code class="docutils literal notranslate"><span class="pre">django-admin</span> <span class="pre">startproject</span> <span class="pre">project_name</span></code>.  This will create a folder for the project with <code class="docutils literal notranslate"><span class="pre">manage.py</span></code>.  I’ll refer to this going forward as the <code class="docutils literal notranslate"><span class="pre">project</span> <span class="pre">directory</span></code>.  You’ll find <code class="docutils literal notranslate"><span class="pre">settings.py</span></code> and <code class="docutils literal notranslate"><span class="pre">urls.py</span></code> in a subdirectory of the project directory.</p></li>
+<li><p>Next create your first Django application.  Go to the project directory and type <code class="docutils literal notranslate"><span class="pre">manage.py</span> <span class="pre">startapp</span> <span class="pre">app_name</span></code>.</p></li>
+</ul>
+<img src="https://raw.githubusercontent.com/HCDigitalScholarship/ds-cookbook/master/google_vision/why-django-for-web-development-8-638.jpg" />
+<ul class="simple">
+<li><p>The migrate command will update the database based on the code in your <code class="docutils literal notranslate"><span class="pre">models.py</span></code> and other files.  To make the db reflect your current code, type <code class="docutils literal notranslate"><span class="pre">$</span> <span class="pre">python</span> <span class="pre">manage.py</span> <span class="pre">migrate</span></code>.  This will update the db with the tables needed to create users and user groups.</p></li>
+<li><p>Before you can log in to the admin page, you’ll need to create a user by typing <code class="docutils literal notranslate"><span class="pre">$</span> <span class="pre">python</span> <span class="pre">manage.py</span> <span class="pre">createsuperuser</span></code>.</p></li>
+<li><p>To add you new app to the project, edit <code class="docutils literal notranslate"><span class="pre">settings.py</span></code>.  Use a text editor to add <code class="docutils literal notranslate"><span class="pre">'app_name',</span></code> to the INSTALLED_APPS section.</p></li>
+</ul>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">INSTALLED_APPS</span> <span class="o">=</span> <span class="p">(</span>
+    <span class="s1">&#39;django.contrib.admin&#39;</span><span class="p">,</span>
+    <span class="s1">&#39;django.contrib.auth&#39;</span><span class="p">,</span>
+    <span class="s1">&#39;django.contrib.contenttypes&#39;</span><span class="p">,</span>
+    <span class="s1">&#39;django.contrib.sessions&#39;</span><span class="p">,</span>
+    <span class="s1">&#39;django.contrib.messages&#39;</span><span class="p">,</span>
+    <span class="s1">&#39;django.contrib.staticfiles&#39;</span><span class="p">,</span>
+    <span class="s1">&#39;app_name&#39;</span><span class="p">,</span>
+<span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="urls">
+<h2>URLS<a class="headerlink" href="#urls" title="Permalink to this headline">¶</a></h2>
+<p><em><a class="reference external" href="http://urls.py">urls.py</a></em></p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">django.urls</span> <span class="kn">import</span> <span class="n">include</span><span class="p">,</span> <span class="n">path</span>
+
+<span class="n">urlpatterns</span> <span class="o">=</span> <span class="p">[</span>
+    <span class="n">path</span><span class="p">(</span><span class="s1">&#39;index/&#39;</span><span class="p">,</span> <span class="n">views</span><span class="o">.</span><span class="n">index</span><span class="p">,</span> <span class="n">name</span><span class="o">=</span><span class="s1">&#39;main-view&#39;</span><span class="p">),</span>
+    <span class="n">path</span><span class="p">(</span><span class="s1">&#39;/goto&#39;</span><span class="p">,</span> <span class="n">views</span><span class="o">.</span><span class="n">goto</span><span class="p">,</span> <span class="n">name</span><span class="o">=</span><span class="s1">&#39;goto&#39;</span><span class="p">),</span>
+    <span class="o">...</span>
+<span class="p">]</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="views">
+<h2>Views<a class="headerlink" href="#views" title="Permalink to this headline">¶</a></h2>
+<p><a class="reference external" href="https://docs.djangoproject.com/en/3.0/topics/http/views/">Function-based view</a></p>
+<p><em><a class="reference external" href="http://views.py">views.py</a></em></p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">django.shortcuts</span> <span class="kn">import</span> <span class="n">render</span>
+<span class="kn">from</span> <span class="nn">myapp.models</span> <span class="kn">import</span> <span class="n">goto</span>
+
+<span class="k">def</span> <span class="nf">goto</span><span class="p">(</span><span class="n">request</span><span class="p">):</span>
+  <span class="n">context</span> <span class="o">=</span> <span class="p">{}</span>
+  <span class="n">context</span><span class="p">[</span><span class="s1">&#39;gotos&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">goto</span><span class="o">.</span><span class="n">objects</span><span class="o">.</span><span class="n">all</span><span class="p">()</span>
+  <span class="k">return</span> <span class="n">render</span><span class="p">(</span><span class="n">request</span><span class="p">,</span> <span class="s2">&quot;goto.html&quot;</span><span class="p">,</span> <span class="n">context</span><span class="p">)</span>
+
+</pre></div>
+</div>
+<p><a class="reference external" href="https://docs.djangoproject.com/en/3.0/topics/class-based-views/intro/">Class-based view</a></p>
+<p><em><a class="reference external" href="http://views.py">views.py</a></em></p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">django.views.generic.base</span> <span class="kn">import</span> <span class="n">TemplateView</span>
+<span class="kn">from</span> <span class="nn">myapp.models</span> <span class="kn">import</span> <span class="n">goto</span>
+
+<span class="k">class</span> <span class="nc">GoTo</span><span class="p">(</span><span class="n">TemplateView</span><span class="p">):</span>
+
+    <span class="n">template_name</span> <span class="o">=</span> <span class="s2">&quot;goto.html&quot;</span>
+
+    <span class="k">def</span> <span class="nf">get_context_data</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
+        <span class="n">context</span> <span class="o">=</span> <span class="nb">super</span><span class="p">()</span><span class="o">.</span><span class="n">get_context_data</span><span class="p">(</span><span class="o">**</span><span class="n">kwargs</span><span class="p">)</span>
+        <span class="n">context</span><span class="p">[</span><span class="s1">&#39;gotos&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">goto</span><span class="o">.</span><span class="n">objects</span><span class="o">.</span><span class="n">all</span><span class="p">()</span>
+<span class="k">return</span> <span class="n">context</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="models">
+<h2>Models<a class="headerlink" href="#models" title="Permalink to this headline">¶</a></h2>
+<ol class="simple">
+<li><p><a class="reference external" href="https://docs.djangoproject.com/en/3.0/topics/db/models/">Django models docs</a></p></li>
+<li><p><a class="reference external" href="https://developer.mozilla.org/en-US/docs/Learn/Server-side/Django/Models">Mozilla on Django Models</a></p></li>
+<li><p><a class="reference external" href="https://docs.djangoproject.com/en/3.0/topics/db/queries/">Django ORM</a></p></li>
+</ol>
+<p><em><a class="reference external" href="http://models.py">models.py</a></em></p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">django.db</span> <span class="kn">import</span> <span class="n">models</span>
+
+<span class="k">class</span> <span class="nc">goto</span><span class="p">(</span><span class="n">models</span><span class="o">.</span><span class="n">Model</span><span class="p">):</span>
+    <span class="n">first_name</span> <span class="o">=</span> <span class="n">models</span><span class="o">.</span><span class="n">CharField</span><span class="p">(</span><span class="n">max_length</span><span class="o">=</span><span class="mi">30</span><span class="p">)</span>
+    <span class="n">last_name</span> <span class="o">=</span> <span class="n">models</span><span class="o">.</span><span class="n">CharField</span><span class="p">(</span><span class="n">max_length</span><span class="o">=</span><span class="mi">30</span><span class="p">)</span>
+
+    <span class="k">def</span> <span class="fm">__str__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="k">return</span> <span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="bp">self</span><span class="o">.</span><span class="n">first_name</span><span class="si">}</span><span class="s2"> </span><span class="si">{</span><span class="bp">self</span><span class="o">.</span><span class="n">last_name</span><span class="si">}</span><span class="s2">&quot;</span>
+
+</pre></div>
+</div>
+</div>
+<div class="section" id="adding-data">
+<h2>Adding Data<a class="headerlink" href="#adding-data" title="Permalink to this headline">¶</a></h2>
+<p>Open the project shell.
+<code class="docutils literal notranslate"><span class="pre">$</span> <span class="pre">python</span> <span class="pre">manage.py</span> <span class="pre">shell</span></code></p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span> <span class="nn">myapp.models</span> <span class="kn">import</span> <span class="n">goto</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">new_goto</span><span class="p">,</span> <span class="n">created</span> <span class="o">=</span> <span class="n">goto</span><span class="o">.</span><span class="n">objects</span><span class="o">.</span><span class="n">update_or_create</span><span class="p">(</span><span class="n">first_name</span><span class="o">=</span><span class="s2">&quot;Andy&quot;</span><span class="p">,</span> <span class="n">last_name</span><span class="o">=</span><span class="s2">&quot;Janco&quot;</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="nb">print</span><span class="p">(</span><span class="n">new_goto</span><span class="o">.</span><span class="n">id</span><span class="p">,</span> <span class="n">new_goto</span><span class="o">.</span><span class="n">first_name</span><span class="p">,</span> <span class="n">new_goto</span><span class="o">.</span><span class="n">last_name</span><span class="p">)</span>
+<span class="go">1 Andy Janco</span>
+
+</pre></div>
+</div>
+<p>See also <a class="reference external" href="https://docs.djangoproject.com/en/3.0/howto/initial-data/#providing-initial-data-for-models">loaddata and fixtures</a></p>
+</div>
+<div class="section" id="manage-py-commands">
+<h2><a class="reference external" href="http://Manage.py">Manage.py</a> commands<a class="headerlink" href="#manage-py-commands" title="Permalink to this headline">¶</a></h2>
+<p>Run a local server
+<code class="docutils literal notranslate"><span class="pre">python</span> <span class="pre">manage.py</span> <span class="pre">runserver</span></code></p>
+<p>Update the db schema based on <a class="reference external" href="http://models.py">models.py</a>
+<code class="docutils literal notranslate"><span class="pre">python</span> <span class="pre">manage.py</span> <span class="pre">makemigrations</span></code>
+<code class="docutils literal notranslate"><span class="pre">python</span> <span class="pre">manage.py</span> <span class="pre">migrate</span></code></p>
+<p><a class="reference external" href="https://docs.djangoproject.com/en/3.0/howto/legacy-databases/">Create models.py from an existing db</a>
+<code class="docutils literal notranslate"><span class="pre">python</span> <span class="pre">manage.py</span> <span class="pre">inspectdb</span> <span class="pre">&gt;</span> <span class="pre">models.py</span></code></p>
+<p>You can <a class="reference external" href="https://docs.djangoproject.com/en/3.0/howto/custom-management-commands/">create your own commands</a> as well</p>
+<ul class="simple">
+<li><p>place a file in <code class="docutils literal notranslate"><span class="pre">myapp/management/commands</span></code></p></li>
+</ul>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">django.core.management.base</span> <span class="kn">import</span> <span class="n">BaseCommand</span>
+<span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
+<span class="kn">from</span> <span class="nn">pathlib</span> <span class="kn">import</span> <span class="n">Path</span>
+
+<span class="k">class</span> <span class="nc">Command</span><span class="p">(</span><span class="n">BaseCommand</span><span class="p">):</span>
+    <span class="n">help</span> <span class="o">=</span> <span class="s1">&#39;Import new data from a csv file&#39;</span>
+
+    <span class="k">def</span> <span class="nf">add_arguments</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">parser</span><span class="p">):</span>
+        <span class="n">parser</span><span class="o">.</span><span class="n">add_argument</span><span class="p">(</span><span class="s1">&#39;path&#39;</span><span class="p">,</span> <span class="n">nargs</span><span class="o">=</span><span class="s1">&#39;+&#39;</span><span class="p">,</span> <span class="nb">type</span><span class="o">=</span><span class="nb">int</span><span class="p">)</span>
+
+    <span class="k">def</span> <span class="nf">handle</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="o">**</span><span class="n">options</span><span class="p">):</span>
+      <span class="n">path</span> <span class="o">=</span> <span class="n">Path</span><span class="p">(</span><span class="n">options</span><span class="p">[</span><span class="s1">&#39;path&#39;</span><span class="p">])</span>
+      <span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="n">path</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="further-reading">
+<h2>Further Reading<a class="headerlink" href="#further-reading" title="Permalink to this headline">¶</a></h2>
+<p><a class="reference external" href="https://developer.mozilla.org/en-US/docs/Learn/Server-side/Django">Mozilla Django Tutorial</a></p>
+<p><a class="reference external" href="https://tutorial.djangogirls.org/en/django/">Django Girls</a></p>
+<p>Cookbook entries</p>
+<ul class="simple">
+<li><p><a class="reference external" href="https://github.com/HCDigitalScholarship/ds-cookbook/tree/master/django_flatpages">Flatpages and ckeditor</a></p></li>
+<li><p><a class="reference external" href="https://github.com/HCDigitalScholarship/ds-cookbook/tree/master/internationalization">Support many languages</a></p></li>
+<li><p><a class="reference external" href="https://github.com/HCDigitalScholarship/ds-cookbook/tree/master/django_email_verification">User registration with confirmation email</a></p></li>
+<li><p><a class="reference external" href="https://realpython.com/adding-social-authentication-to-django/">Use Google for user authentication</a></p></li>
+<li><p><a class="reference external" href="https://github.com/HCDigitalScholarship/ds-cookbook/tree/master/django-import-export">Import and Export data in Admin</a></p></li>
+<li><p><a class="reference external" href="https://github.com/HCDigitalScholarship/ds-cookbook/tree/master/datatables-server-side-processing">DataTables: Server Side Processing</a></p></li>
+</ul>
+</div>
+<hr class="docutils" />
+<div class="section" id="title-13-python-and-databases-may-27-pm-description-how-to-work-with-databases-with-the-django-orm-or-tortoise-orm-models-py-prev-chapter12-next-chapter14-type-chapter-id-13">
+<h2>title: ‘13 Python and Databases (May 27 PM)’
+description:
+“How to work with databases with the Django ORM or Tortoise ORM. <a class="reference external" href="http://models.py">models.py</a>”
+prev: /chapter12
+next: /chapter14
+type: chapter
+id: 13<a class="headerlink" href="#title-13-python-and-databases-may-27-pm-description-how-to-work-with-databases-with-the-django-orm-or-tortoise-orm-models-py-prev-chapter12-next-chapter14-type-chapter-id-13" title="Permalink to this headline">¶</a></h2>
+<exercise id="1" title="That '70s Database Language">
+<div class="highlight-sql notranslate"><div class="highlight"><pre><span></span><span class="k">SELECT</span> <span class="n">people</span> <span class="k">FROM</span> <span class="n">party</span> <span class="k">WHERE</span> <span class="n">groove</span> <span class="k">LIKE</span> <span class="s1">&#39;get Down&#39;</span> <span class="k">OR</span> <span class="s1">&#39;boogie&#39;</span><span class="p">;</span>
+</pre></div>
+</div>
+<img src="https://img1.looper.com/img/gallery/we-finally-understand-why-that-70s-show-was-canceled/intro-1568723982.jpg" width="50%">
+<p><code class="docutils literal notranslate"> <span class="pre">SQL</span> <span class="pre">is</span> <span class="pre">like</span> <span class="pre">Latin</span> <span class="pre">for</span> <span class="pre">data</span> <span class="pre">analysts/scientists.</span> <span class="pre">You</span> <span class="pre">may</span> <span class="pre">not</span> <span class="pre">always</span> <span class="pre">realize</span> <span class="pre">you</span> <span class="pre">are</span> <span class="pre">using</span> <span class="pre">it,</span> <span class="pre">but</span> <span class="pre">you</span> <span class="pre">are</span> <span class="pre">probably</span> <span class="pre">using</span> <span class="pre">it.</span></code></p>
+<div class="section" id="relational-database-design">
+<h3>Relational Database Design<a class="headerlink" href="#relational-database-design" title="Permalink to this headline">¶</a></h3>
+<p>Relational databases are still the most common form of data storage and management, even after all these years. They are essentially a series of tables, linked by common key values. Best practice for database design dictates that each table has a designated <em>primary key</em> field, which acts a unique identifier for a database record.</p>
+<p>Tables are linked through <em>foreign keys</em>, which match a field and value in one table with the primary key field and value in another table.</p>
+<p>Relational databases are built on three types of relationships:</p>
+<ol class="simple">
+<li><p>One-to-one</p></li>
+<li><p>One-to-many</p></li>
+<li><p>Many-to-many</p></li>
+</ol>
+<img src="er.png">
+</div>
+<div class="section" id="sql">
+<h3>SQL<a class="headerlink" href="#sql" title="Permalink to this headline">¶</a></h3>
+<p>Most relational databases use some flavor of SQL–structured query language–to query and manage the data.</p>
+<p><a class="reference external" href="https://www.w3schools.com/sql/default.asp">w3schools</a></p>
+<p><a class="reference external" href="https://www.digitalocean.com/community/tutorials/a-basic-mysql-tutorial">DigitalOcean: A Basic MySQL Tutorial</a></p>
+<p>MySQL is one of the most longstanding and popular open-source database engines, with PostgreSQL as its more robust competition. “Postgres” has additional features like geospatial data and querying, which makes data-driven mapping possible. We use both in our projects, as MySQL is easier to use while Postgres’s spatial capacity creates new project opportunities for us.</p>
+<p><a class="reference external" href="https://medium.com/&#64;tjukanov/why-should-you-care-about-postgis-a-gentle-introduction-to-spatial-databases-9eccd26bc42b">Why should you care about PostGIS?–A Gentle Introduction to Spatial Databases</a></p>
+<p>A long time ago, I wrote half a thing about database design principles. <a class="reference external" href="https://docs.google.com/document/d/1TPVSVuMJk2kQ-G2rMBhBLoB5dH5ghQl0_H0IBP6FYIY/edit">Check it out!</a></p>
+<p><a class="reference external" href="https://docs.djangoproject.com/en/3.0/ref/django-admin/#dbshell"><code class="docutils literal notranslate"><span class="pre">python</span> <span class="pre">manage.py</span> <span class="pre">dbshell</span></code></a></p>
+<p><a class="reference external" href="https://docs.djangoproject.com/en/3.0/topics/db/queries/#complex-lookups-with-q-objects">Django Q objects</a></p>
+<p><a class="reference external" href="https://docs.djangoproject.com/en/3.0/ref/contrib/postgres/search/">Django postgres search</a></p>
+<p><a class="reference external" href="https://www.sequelpro.com/">https://www.sequelpro.com/</a></p>
+<p><a class="reference external" href="https://www.jetbrains.com/datagrip/">https://www.jetbrains.com/datagrip/</a></p>
+<p><a class="reference external" href="https://dbeaver.io/">https://dbeaver.io/</a></p>
+</div>
+</div>
 </div>
 
     <script type="text/x-thebe-config">
@@ -262,8 +524,8 @@
         
         <div class='prev-next-bottom'>
             
-    <a class='left-prev' id="prev-link" href="june8.html" title="previous page">June 8</a>
-    <a class='right-next' id="next-link" href="june10.html" title="next page">June 10</a>
+    <a class='left-prev' id="prev-link" href="june8.html" title="previous page">June 8 ~ Forms</a>
+    <a class='right-next' id="next-link" href="june10.html" title="next page">June 10 ~ Deployment</a>
 
         </div>
         
