@@ -35,6 +35,10 @@ In this section, we'll create a very minimal webpage with basic information.
 - What projects are you working on this summer?
 - What's your favorite summer food? 
 
+To access GitHub, you will need to create an account. Go to: https://github.com/join  
+
+Once logged in, you can find our GitHub organization here: https://github.com/HCDigitalScholarship
+
 
 1. [Create a new Github repository](https://docs.github.com/en/github/getting-started-with-github/create-a-repo)
 
@@ -42,10 +46,15 @@ In this section, we'll create a very minimal webpage with basic information.
 
 3. You can start with the minimum needed then add your own content. 
 ```html
-  <!DOCTYPE html>
+ <!DOCTYPE html>
 <html>
   <body>
-    <p>Hello World!</p>
+    <p>My name:</p> <p>...</p>
+    <p>My project(s):</p> <p>...</p>
+    <p>Favorite summer food:</p> <p>...</p>
+    <a href="https://js-dos.com/games/">a link to something fun</a>
+    <!-- add an image if you like -->
+    <img src="https://corgiorgy.com/corgiswimflip.gif" />
   </body>
 </html>
    ```
