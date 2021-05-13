@@ -1,16 +1,56 @@
 June 3 ~ Design 
 ============================
 
-# Bootstrap 
-
 <img src="https://www.tutorialrepublic.com/lib/images/bootstrap-illustration.png">
 
 [Bootstrap tutorial](https://getbootstrap.com/docs/4.1/getting-started/introduction/)
+
+
+## Installation 
+
+```html
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-wEmeIV1mKuiNpC+IOBjI7aAzPcEZeedi5yW5f2yOq55WWLwNGmvvx4Um1vskeMj0" crossorigin="anonymous">
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-p34f1UUtsS3wqzfto5wAAmdvj+osOnFyQFpp4Ua3gs/ZVWx6oOypYoCJhGGScy+8" crossorigin="anonymous"></script>
+```
 
 ## Dynamic Layout
 
 <img src="https://cdn-media-1.freecodecamp.org/images/1*9nkJt3S1Fe_KMkDtpIhgXw.png" />
 
+```html
+<div class="container">
+
+    <div class="row">
+        <div class="col">
+            This is a single column.       
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col">
+            This is the first column.       
+        </div>
+        <div class="col">
+            This is the second column.        
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col">
+            This is the first column.       
+        </div>
+        <div class="col">
+            This is the second column.        
+        </div>
+        <div class="col">
+            This is the third column.
+        </div>
+        <div class="col">
+            This is the fourth column.
+        </div>
+    </div>
+</div>
+```
 
 ## Components 
 
