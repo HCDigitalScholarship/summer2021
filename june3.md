@@ -11,8 +11,6 @@ June 3 ~ Design
 
 <img src="https://cdn-media-1.freecodecamp.org/images/1*9nkJt3S1Fe_KMkDtpIhgXw.png" />
 
-<a href="https://codepen.io/cristinaconacel/pen/NOLEyy" target="_blank">CodePen</a>
-
 <iframe height="100%" width="100%" src="https://bootstrapstudio.io/">
 
 ## Working from existing themes 

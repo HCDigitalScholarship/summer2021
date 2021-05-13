@@ -144,7 +144,7 @@ class Command(BaseCommand):
       df = pd.read_csv(path)
 ```
 
-### Further Reading 
+### Further Reading
 
 [Mozilla Django Tutorial](https://developer.mozilla.org/en-US/docs/Learn/Server-side/Django)
 
