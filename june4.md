@@ -3,7 +3,7 @@ June 4 ~ JavaScript
 
 
 
-# JavaScript Syntax
+## JavaScript Syntax
 
 Javascript is a scripting language originally designed to facilitate interactions between the user and a web page. It has since grown into a full client- and server-side scripting language, with web frameworks built entirely in Javascript like [NodeJS](https://nodejs.org/en/) (including the framework for this application!).
 
@@ -45,7 +45,7 @@ console.log(fish + " " + count);
 
 ---
 
-# [Arrays](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array) 
+## [Arrays](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array) 
 
 ```javascript
 
@@ -57,7 +57,7 @@ fishes[0]  // access values by index
 
 ---
 
-# [Dictionaries](https://pietschsoft.com/post/2015/09/05/javascript-basics-how-to-create-a-dictionary-with-keyvalue-pairs)
+## [Dictionaries](https://pietschsoft.com/post/2015/09/05/javascript-basics-how-to-create-a-dictionary-with-keyvalue-pairs)
 
 ```javascript
 var dict = {};
@@ -90,7 +90,7 @@ add_fishes(fishes); // pass the array to the function
 ```
 ---
 
-# [The DOM (document object model)](https://developer.mozilla.org/en-US/docs/Web/API/Document)
+## [The DOM (document object model)](https://developer.mozilla.org/en-US/docs/Web/API/Document)
 
 - `document.documentURI;` // get current URI value
 - `document.getElementById('my_img').src = new value;`
