@@ -146,9 +146,11 @@ class Command(BaseCommand):
 
 ### Further Reading
 
-[Mozilla Django Tutorial](https://developer.mozilla.org/en-US/docs/Learn/Server-side/Django)
+- [Mozilla Django Tutorial](https://developer.mozilla.org/en-US/docs/Learn/Server-side/Django)
 
-[Django Girls](https://tutorial.djangogirls.org/en/django/)
+- [Real Python](https://realpython.com/get-started-with-django-1/)
+
+- [Django Girls](https://tutorial.djangogirls.org/en/django/)
 
 Cookbook entries
 - [Flatpages and ckeditor](https://github.com/HCDigitalScholarship/ds-cookbook/tree/master/django_flatpages)
@@ -158,17 +160,9 @@ Cookbook entries
 - [Import and Export data in Admin](https://github.com/HCDigitalScholarship/ds-cookbook/tree/master/django-import-export)
 - [DataTables: Server Side Processing](https://github.com/HCDigitalScholarship/ds-cookbook/tree/master/datatables-server-side-processing)
 
----
-title: '13 Python and Databases (May 27 PM)'
-description:
-  "How to work with databases with the Django ORM or Tortoise ORM. models.py"
-prev: /chapter12
-next: /chapter14
-type: chapter
-id: 13
----
 
-<exercise id="1" title="That '70s Database Language">
+
+## That '70s Database Language
 
 ```sql
 SELECT people FROM party WHERE groove LIKE 'get Down' OR 'boogie';
