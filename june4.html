@@ -433,10 +433,10 @@
 <h2>Making changes to the DOM<a class="headerlink" href="#making-changes-to-the-dom" title="Permalink to this headline">¶</a></h2>
 <p>Once you have selected an element in the DOM, you can read values and set values.  This can be used to change the page without having to refresh the page or make a call to the server.</p>
 <p>For example:</p>
-<p>let’s make changes to <a class="reference external" href="https://www.cia.gov/about-cia">https://www.cia.gov/about-cia</a></p>
+<p>let’s make changes to <a class="reference external" href="https://alwaysjudgeabookbyitscover.com/">https://alwaysjudgeabookbyitscover.com/</a></p>
 <p>in the console</p>
-<div class="highlight-javascript notranslate"><div class="highlight"><pre><span></span><span class="kd">let</span> <span class="nx">element</span> <span class="o">=</span> <span class="nb">document</span><span class="p">.</span><span class="nx">getElementsByClassName</span><span class="p">(</span><span class="s1">&#39;text-holder&#39;</span><span class="p">);</span> 
-<span class="nx">element</span><span class="p">[</span><span class="mf">0</span><span class="p">].</span><span class="nx">innerText</span> <span class="o">=</span> <span class="s2">&quot;The CIA is a mass of incadesent gas a gigantic nuclear furnace.  Where hydrogen is build into helium at a temperature of millions of degrees.&quot;</span> 
+<div class="highlight-javascript notranslate"><div class="highlight"><pre><span></span><span class="kd">let</span> <span class="nx">element</span> <span class="o">=</span> <span class="nb">document</span><span class="p">.</span><span class="nx">getElementsByTagName</span><span class="p">(</span><span class="s2">&quot;h1&quot;</span><span class="p">);</span> 
+<span class="nx">element</span><span class="p">[</span><span class="mf">0</span><span class="p">].</span><span class="nx">innerText</span> <span class="o">=</span> <span class="s2">&quot;The sun is a mass of incandescent gas a gigantic nuclear furnace.  Where hydrogen is build into helium at a temperature of millions of degrees.&quot;</span> 
 </pre></div>
 </div>
 </div>

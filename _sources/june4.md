@@ -138,12 +138,12 @@ Once you have selected an element in the DOM, you can read values and set values
 
 For example:  
 
-let's make changes to [https://www.cia.gov/about-cia](https://www.cia.gov/about-cia)  
+let's make changes to https://alwaysjudgeabookbyitscover.com/
 
 in the console
 ```javascript
-let element = document.getElementsByClassName('text-holder'); 
-element[0].innerText = "The CIA is a mass of incadesent gas a gigantic nuclear furnace.  Where hydrogen is build into helium at a temperature of millions of degrees." 
+let element = document.getElementsByTagName("h1"); 
+element[0].innerText = "The sun is a mass of incandescent gas a gigantic nuclear furnace.  Where hydrogen is build into helium at a temperature of millions of degrees." 
 ```
 
 ---
