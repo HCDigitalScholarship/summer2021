@@ -3,11 +3,11 @@ June 7 ~ Request/Response
 
 ---
 
-<img src="bboard.jpg">
+<img src="https://hcwebdev.netlify.app/bboard.jpg">
 
 ---
 
-<img src="dns-via-home-router2.jpg">
+<img src="https://hcwebdev.netlify.app/dns-via-home-router2.jpg">
 
 ---
 
