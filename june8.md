@@ -2,7 +2,7 @@ June 8 ~ Forms
 ============================
 
 
-[w3schools](https://www.w3schools.com/html/html_forms.asp)
+[w3schools](https://www.w3schools.com/html/html_forms.asp)  
 [Django docs forms](https://docs.djangoproject.com/en/3.0/topics/forms/)
 
 ```html
@@ -31,7 +31,7 @@ June 8 ~ Forms
 
 *note the GET requests in the logs*
 
-add to def index(request):
+In Django, add to def index(request):
 ```python
 if request.GET:
     context = {}
@@ -42,6 +42,14 @@ if request.GET:
 else:
     return render(request, "index.html",)
 ```
+
+FastAPI version would be: 
+```python
+app.get('/')
+async def got_ya(fname:str, lname:str):
+  return f"Hello {fname} {lname}"
+```
+
 add to index.html
 ```html
 <script>
@@ -63,72 +71,21 @@ change `index.html`
 ...
 </form>
 ```
-
+In Django:
 change `views.py`
 change GET to POST
 
-<hr>
-<h2>GET vs. POST</h2>
-<p>The following table compares the two HTTP methods: GET and POST.</p>
-<div class="w3-responsive">
-<table class="w3-table-all notranslate">
-  <tr>
-    <th style="width:30%">&nbsp;</th>
-    <th style="width:35%">GET</th>
-    <th>POST</th>
-  </tr>
-  <tr>
-    <td>BACK button/Reload</td>
-    <td>Harmless</td>
-    <td>Data will be re-submitted (the browser should alert the user that the data are about to be re-submitted)</td>
-  </tr>
-  <tr>
-    <td>Bookmarked</td>
-    <td>Can be bookmarked</td>
-    <td>Cannot be bookmarked</td>
-  </tr>
-  <tr>
-    <td>Cached</td>
-    <td>Can be cached</td>
-    <td>Not cached</td>
-  </tr>
-  <tr>
-    <td>Encoding type</td>
-    <td>application/x-www-form-urlencoded</td>
-    <td>application/x-www-form-urlencoded or multipart/form-data. Use multipart encoding for binary data</td>
-  </tr>
-  <tr>
-    <td>History</td>
-    <td>Parameters remain in browser history</td>
-    <td>Parameters are not saved in browser history</td>
-  </tr>
-  <tr>
-    <td>Restrictions on data length</td>
-    <td>Yes, when sending data, the GET method adds the data to the URL; and the length of a URL is limited (maximum URL length is 2048 characters)</td>
-    <td>No restrictions</td>
-  </tr>
-  <tr>
-    <td>Restrictions on data type</td>
-    <td>Only ASCII characters allowed</td>
-    <td>No restrictions. Binary data is also allowed</td>
-  </tr>
-  <tr>
-    <td>Security</td>
-    <td>GET is less secure compared to POST because data sent is part of the URL<br>
- <br>
- Never use GET when sending passwords or other sensitive information!</td>
-    <td>POST is a little safer than GET because the parameters are not stored in browser history or in web server logs</td>
-  </tr>
-  <tr>
-    <td>Visibility</td>
-    <td>Data is visible to everyone in the URL</td>
-    <td>Data is not displayed in the URL</td>
-  </tr>
-  </table>
-</div>
-<a href="https://www.w3schools.com/tags/ref_httpmethods.asp">src</a>
-<hr>
-
+In FastAPI:
+```python
+@app.post("/")
+async def post_me(
+    # field name, field type, get from Form(...) is required or Form(None) not required
+    lang_name: str = Form(...),
+    lang_code: str = Form(...),
+    this_is_optional: Optional[str] = Form(None),
+    and_files: List[UploadFile] = File(None),
+):
+```
 
 
 ### Django Forms 

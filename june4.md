@@ -11,7 +11,7 @@ The [Mozilla Javascript tutorial](https://developer.mozilla.org/en-US/docs/Web/J
 
 ---
 
-## There's a JavaScript terminal in your browser 
+### There's a JavaScript terminal in your browser 
 
 Right-click > inspect element > console 
 

@@ -70,10 +70,10 @@ https://developer.mozilla.org/en-US/docs/Web/HTTP/Overview
 
 ## Requests 
 
-### Request types
+
 
 <hr>
-<h2>GET vs. POST</h2>
+<h4>GET vs. POST</h4>
 <p>The following table compares the two HTTP methods: GET and POST.</p>
 <div class="w3-responsive">
 <table class="w3-table-all notranslate">
@@ -175,7 +175,7 @@ requests.options('https://httpbin.org/get')
 
 ---
 
-<iframe style="width:100%;height:100%" src="https://httpbin.org/"></iframe>
+<iframe style="width:100%;height:400px" src="https://httpbin.org/"></iframe>
 
 ---
 
