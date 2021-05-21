@@ -150,18 +150,8 @@ Visual Studio Code is currently one of the most popular code editors.  It's simp
 
 ---
 
-<iframe width="100%" height="100%" src="https://www.youtube.com/embed/W--_EOzdTHk" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+<iframe width="100%" height="400px" src="https://www.youtube.com/embed/W--_EOzdTHk" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
----
-
-## Atom 
-<img src="https://videlais.files.wordpress.com/2019/01/screenshot2019-01-3115.19.37.png" alt="This image is in /static" width="50%">
-
-
-From the makers of GitHub, Atom is very similar to VSCode and works great. 
-
-
-[download here](https://atom.io/)
 ---
 
 ## PyCharm 
@@ -173,7 +163,6 @@ Real Python has a [great guide on PyCharm](https://realpython.com/pycharm-guide/
 
 ---
 
-## Kite
 <img src="https://lever-client-logos.s3.amazonaws.com/b2b59285-235a-438e-8acd-a00e9ff37245-1537838422416.png" width="25%" />
 
 Whatever code editor you're using, we recommend also installing [Kite](https://www.kite.com/).
@@ -187,8 +176,6 @@ Kite is kind a great tool for seeing how other people write their code. As you w
 </video>
 
 ---
-
-## Black
 
 <img src="https://warehouse-camo.ingress.cmh1.psfhosted.org/0fec70e46ca299f4ec9d49a417c04795107b74f0/68747470733a2f2f7261772e67697468756275736572636f6e74656e742e636f6d2f7073662f626c61636b2f6d61737465722f646f63732f5f7374617469632f6c6f676f322d726561646d652e706e67" width="25%" />
 

@@ -258,7 +258,7 @@
                 
   <div class="section" id="june-8-forms">
 <h1>June 8 ~ Forms<a class="headerlink" href="#june-8-forms" title="Permalink to this headline">¶</a></h1>
-<p><a class="reference external" href="https://www.w3schools.com/html/html_forms.asp">w3schools</a>
+<p><a class="reference external" href="https://www.w3schools.com/html/html_forms.asp">w3schools</a><br />
 <a class="reference external" href="https://docs.djangoproject.com/en/3.0/topics/forms/">Django docs forms</a></p>
 <div class="highlight-html notranslate"><div class="highlight"><pre><span></span><span class="p">&lt;</span><span class="nt">form</span><span class="p">&gt;</span>
   <span class="p">&lt;</span><span class="nt">label</span> <span class="na">for</span><span class="o">=</span><span class="s">&quot;fname&quot;</span><span class="p">&gt;</span>First name:<span class="p">&lt;/</span><span class="nt">label</span><span class="p">&gt;&lt;</span><span class="nt">br</span><span class="p">&gt;</span>
@@ -280,7 +280,7 @@
 </pre></div>
 </div>
 <p><em>note the GET requests in the logs</em></p>
-<p>add to def index(request):</p>
+<p>In Django, add to def index(request):</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">if</span> <span class="n">request</span><span class="o">.</span><span class="n">GET</span><span class="p">:</span>
     <span class="n">context</span> <span class="o">=</span> <span class="p">{}</span>
     <span class="n">first_name</span> <span class="o">=</span> <span class="n">request</span><span class="o">.</span><span class="n">GET</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;fname&#39;</span><span class="p">,</span> <span class="kc">None</span><span class="p">)</span>
@@ -289,6 +289,12 @@
     <span class="k">return</span> <span class="n">render</span><span class="p">(</span><span class="n">request</span><span class="p">,</span> <span class="s1">&#39;index.html&#39;</span><span class="p">,</span> <span class="n">context</span><span class="p">)</span>
 <span class="k">else</span><span class="p">:</span>
     <span class="k">return</span> <span class="n">render</span><span class="p">(</span><span class="n">request</span><span class="p">,</span> <span class="s2">&quot;index.html&quot;</span><span class="p">,)</span>
+</pre></div>
+</div>
+<p>FastAPI version would be:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">app</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;/&#39;</span><span class="p">)</span>
+<span class="k">async</span> <span class="k">def</span> <span class="nf">got_ya</span><span class="p">(</span><span class="n">fname</span><span class="p">:</span><span class="nb">str</span><span class="p">,</span> <span class="n">lname</span><span class="p">:</span><span class="nb">str</span><span class="p">):</span>
+  <span class="k">return</span> <span class="sa">f</span><span class="s2">&quot;Hello </span><span class="si">{</span><span class="n">fname</span><span class="si">}</span><span class="s2"> </span><span class="si">{</span><span class="n">lname</span><span class="si">}</span><span class="s2">&quot;</span>
 </pre></div>
 </div>
 <p>add to index.html</p>
@@ -309,69 +315,20 @@
 <span class="p">&lt;/</span><span class="nt">form</span><span class="p">&gt;</span>
 </pre></div>
 </div>
-<p>change <code class="docutils literal notranslate"><span class="pre">views.py</span></code>
+<p>In Django:
+change <code class="docutils literal notranslate"><span class="pre">views.py</span></code>
 change GET to POST</p>
-<hr>
-<h2>GET vs. POST</h2>
-<p>The following table compares the two HTTP methods: GET and POST.</p>
-<div class="w3-responsive">
-<table class="w3-table-all notranslate">
-  <tr>
-    <th style="width:30%">&nbsp;</th>
-    <th style="width:35%">GET</th>
-    <th>POST</th>
-  </tr>
-  <tr>
-    <td>BACK button/Reload</td>
-    <td>Harmless</td>
-    <td>Data will be re-submitted (the browser should alert the user that the data are about to be re-submitted)</td>
-  </tr>
-  <tr>
-    <td>Bookmarked</td>
-    <td>Can be bookmarked</td>
-    <td>Cannot be bookmarked</td>
-  </tr>
-  <tr>
-    <td>Cached</td>
-    <td>Can be cached</td>
-    <td>Not cached</td>
-  </tr>
-  <tr>
-    <td>Encoding type</td>
-    <td>application/x-www-form-urlencoded</td>
-    <td>application/x-www-form-urlencoded or multipart/form-data. Use multipart encoding for binary data</td>
-  </tr>
-  <tr>
-    <td>History</td>
-    <td>Parameters remain in browser history</td>
-    <td>Parameters are not saved in browser history</td>
-  </tr>
-  <tr>
-    <td>Restrictions on data length</td>
-    <td>Yes, when sending data, the GET method adds the data to the URL; and the length of a URL is limited (maximum URL length is 2048 characters)</td>
-    <td>No restrictions</td>
-  </tr>
-  <tr>
-    <td>Restrictions on data type</td>
-    <td>Only ASCII characters allowed</td>
-    <td>No restrictions. Binary data is also allowed</td>
-  </tr>
-  <tr>
-    <td>Security</td>
-    <td>GET is less secure compared to POST because data sent is part of the URL<br>
- <br>
- Never use GET when sending passwords or other sensitive information!</td>
-    <td>POST is a little safer than GET because the parameters are not stored in browser history or in web server logs</td>
-  </tr>
-  <tr>
-    <td>Visibility</td>
-    <td>Data is visible to everyone in the URL</td>
-    <td>Data is not displayed in the URL</td>
-  </tr>
-  </table>
+<p>In FastAPI:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="nd">@app</span><span class="o">.</span><span class="n">post</span><span class="p">(</span><span class="s2">&quot;/&quot;</span><span class="p">)</span>
+<span class="k">async</span> <span class="k">def</span> <span class="nf">post_me</span><span class="p">(</span>
+    <span class="c1"># field name, field type, get from Form(...) is required or Form(None) not required</span>
+    <span class="n">lang_name</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="n">Form</span><span class="p">(</span><span class="o">...</span><span class="p">),</span>
+    <span class="n">lang_code</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="n">Form</span><span class="p">(</span><span class="o">...</span><span class="p">),</span>
+    <span class="n">this_is_optional</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="nb">str</span><span class="p">]</span> <span class="o">=</span> <span class="n">Form</span><span class="p">(</span><span class="kc">None</span><span class="p">),</span>
+    <span class="n">and_files</span><span class="p">:</span> <span class="n">List</span><span class="p">[</span><span class="n">UploadFile</span><span class="p">]</span> <span class="o">=</span> <span class="n">File</span><span class="p">(</span><span class="kc">None</span><span class="p">),</span>
+<span class="p">):</span>
+</pre></div>
 </div>
-<a href="https://www.w3schools.com/tags/ref_httpmethods.asp">src</a>
-<hr>
 </div>
 <div class="section" id="django-forms">
 <h2>Django Forms<a class="headerlink" href="#django-forms" title="Permalink to this headline">¶</a></h2>
