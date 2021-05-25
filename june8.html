@@ -281,7 +281,7 @@
 </pre></div>
 </div>
 <p><em>note the GET requests in the logs</em></p>
-<p>In Django, add to def index(request):</p>
+<p>In Django, add to <code class="docutils literal notranslate"><span class="pre">def</span> <span class="pre">index(request)</span></code>:</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">if</span> <span class="n">request</span><span class="o">.</span><span class="n">GET</span><span class="p">:</span>
     <span class="n">context</span> <span class="o">=</span> <span class="p">{}</span>
     <span class="n">first_name</span> <span class="o">=</span> <span class="n">request</span><span class="o">.</span><span class="n">GET</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;fname&#39;</span><span class="p">,</span> <span class="kc">None</span><span class="p">)</span>

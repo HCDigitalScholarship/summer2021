@@ -15,8 +15,6 @@ June 10 ~ Deployment
 
 ### Virtual Machines
 
-<a href="https://twitter.com/tartanllama/status/1333788838980829184?s=21"><img src='tweet.png'/></a>
-
 <img src="https://networkencyclopedia.com/wp-content/uploads/2019/08/virtualization.png"/>
 
 - [VirtualBox](https://fossbytes.com/how-to-install-ubuntu-20-04-lts-virtualbox-windows-mac-linux/)
