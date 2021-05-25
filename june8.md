@@ -31,7 +31,7 @@ June 8 ~ Forms
 
 *note the GET requests in the logs*
 
-In Django, add to def index(request):
+In Django, add to `def index(request)`:
 ```python
 if request.GET:
     context = {}
