@@ -53,7 +53,7 @@
     <link rel="shortcut icon" href="_static/favicon-32x32.png"/>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
-    <link rel="prev" title="June 9 ~ Django ORM" href="june9.html" />
+    <link rel="prev" title="June 9 ~ Django &amp; SQL" href="june9.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="en" />
     
@@ -135,7 +135,7 @@
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="june9.html">
-   June 9 ~ Django ORM
+   June 9 ~ Django &amp; SQL
   </a>
  </li>
  <li class="toctree-l1 current active">
@@ -225,6 +225,46 @@
         <!-- Table of contents -->
         <div class="d-none d-md-block col-md-2 bd-toc show">
             
+            <div class="tocsection onthispage pt-5 pb-3">
+                <i class="fas fa-list"></i> Contents
+            </div>
+            <nav id="bd-toc-nav">
+                <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#great-debates-in-modern-web-development">
+   Great Debates in Modern Web Development
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#virtual-machines">
+     Virtual Machines
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#stacks">
+     Stacks🥞
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#containers">
+     Containers🐳
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#content-delivery-and-object-storage">
+     Content Delivery and Object Storage”&gt;
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#domains">
+     Domains
+    </a>
+   </li>
+  </ul>
+ </li>
+</ul>
+
+            </nav>
         </div>
     </div>
 </div>
@@ -235,6 +275,69 @@
                 
   <div class="section" id="june-10-deployment">
 <h1>June 10 ~ Deployment<a class="headerlink" href="#june-10-deployment" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="great-debates-in-modern-web-development">
+<h2>Great Debates in Modern Web Development<a class="headerlink" href="#great-debates-in-modern-web-development" title="Permalink to this headline">¶</a></h2>
+<p><a class="reference external" href="http://www.mindfiresolutions.com/blog/2018/04/advantages-and-disadvantages-of-django/">“Advantages and Disadvantages of Django”</a></p>
+<p><a class="reference external" href="https://macwright.org/2020/05/10/spa-fatigue.html">Second guessing the modern web</a></p>
+<p><a class="reference external" href="https://des4div.library.northeastern.edu/design-for-diversity-the-case-of-ed-alex-gil/">Design for Diversity: The Case of Ed / Alex Gil</a></p>
+<p><a class="reference external" href="https://www.netlify.com/oreilly-jamstack/#download">Modern Web Development on the Jamstack New Techniques for Ultra Fast Sites and Web Applications by Mathias Biilmann &amp; Phil Hawksworth</a></p>
+<hr class="docutils" />
+<div class="section" id="virtual-machines">
+<h3>Virtual Machines<a class="headerlink" href="#virtual-machines" title="Permalink to this headline">¶</a></h3>
+<p><a href="https://twitter.com/tartanllama/status/1333788838980829184?s=21"><img src='tweet.png'/></a></p>
+<img src="https://networkencyclopedia.com/wp-content/uploads/2019/08/virtualization.png"/>
+<ul class="simple">
+<li><p><a class="reference external" href="https://fossbytes.com/how-to-install-ubuntu-20-04-lts-virtualbox-windows-mac-linux/">VirtualBox</a></p></li>
+<li><p><a class="reference external" href="https://www.digitalocean.com/community/tutorials/how-to-set-up-an-ubuntu-20-04-server-on-a-digitalocean-droplet">Digital Ocean</a></p></li>
+<li><p><a class="reference external" href="https://cloud.google.com/compute/docs/quickstart-linux">Google Cloud Platform</a></p></li>
+<li><p><a class="reference external" href="https://aws.amazon.com/getting-started/launch-a-virtual-machine-B-0/">Amazon Web Services</a></p></li>
+</ul>
+</div>
+<hr class="docutils" />
+<div class="section" id="stacks">
+<h3>Stacks🥞<a class="headerlink" href="#stacks" title="Permalink to this headline">¶</a></h3>
+<p><a href="https://www.digitalocean.com/community/tutorials/how-to-install-linux-apache-mysql-php-lamp-stack-on-ubuntu-20-04"><img src="https://community-cdn-digitalocean-com.global.ssl.fastly.net/variants/UQNi6Eb3hUTz45qZAeX38VYG/035575f2985fe451d86e717d73691e533a1a00545d7230900ed786341dc3c882"/>&gt;</a><a class="reference external" href="https://www.digitalocean.com/community/tutorials/how-to-install-linux-apache-mysql-php-lamp-stack-on-ubuntu-20-04">LAMP</a>
+<a href="https://www.digitalocean.com/community/tutorials/how-to-install-linux-nginx-mysql-php-lemp-stack-on-ubuntu-20-04"><img src="https://community-cdn-digitalocean-com.global.ssl.fastly.net/variants/ETGqcpaD4x4s8zX5n7FmFKXC/035575f2985fe451d86e717d73691e533a1a00545d7230900ed786341dc3c882"></a><a class="reference external" href="https://www.digitalocean.com/community/tutorials/how-to-install-linux-nginx-mysql-php-lemp-stack-on-ubuntu-20-04">LEMP</a>
+<a href="https://jamstack.org/what-is-jamstack/"><img src="https://www.freecodecamp.org/news/content/images/2020/02/jamstack-breakdown-3.jpg
+"></a><a class="reference external" href="https://jamstack.org/what-is-jamstack/">JAM</a>
+<a href="https://developer.mongodb.com/how-to/FARM-Stack-FastAPI-React-MongoDB"><img src="https://external-preview.redd.it/MgCRz52673aLvZM9EIPF9yL4P2T4ZV-UZvDwaRztmGM.jpg?auto=webp&s=6f362409ff2c8a21f68241214f68a33c8f20f4c1"></a><a class="reference external" href="https://developer.mongodb.com/how-to/FARM-Stack-FastAPI-React-MongoDB">FARM</a></p>
+</div>
+<hr class="docutils" />
+<div class="section" id="containers">
+<h3>Containers🐳<a class="headerlink" href="#containers" title="Permalink to this headline">¶</a></h3>
+<img src="https://www.f5.com/content/dam/f5-com/page-assets-en/home-en/resources/white-papers/2019/DIAG-WP-CLOUD-384543897-containerization-01.png">
+<ul class="simple">
+<li><p><a class="reference external" href="https://fastapi.tiangolo.com/deployment/docker/">FastAPI with Docker</a></p></li>
+<li><p><a class="reference external" href="https://github.com/apjanco/blini">Example of FastAPI with Dockerfile and start_docker script</a></p></li>
+<li><p><a class="reference external" href="https://docs.docker.com/compose/django/">Django with Docker</a></p></li>
+<li><p><a class="reference external" href="https://www.digitalocean.com/community/tutorials/how-to-install-and-use-docker-on-ubuntu-18-04">Install Docker on Linux VM</a></p></li>
+<li><p><a class="reference external" href="https://devcenter.heroku.com/articles/django-app-configuration">Build Django app on Heroku</a></p></li>
+<li><p><a class="reference external" href="https://www.digitalocean.com/community/tutorials/how-to-deploy-django-to-app-platform">Django App on Digital Ocean App Platform</a>
+-<a class="reference external" href="https://realpython.com/offline-python-deployments-with-docker/">Offline Python Deployments With Docker</a></p></li>
+</ul>
+</div>
+<hr class="docutils" />
+<div class="section" id="content-delivery-and-object-storage">
+<h3>Content Delivery and Object Storage”&gt;<a class="headerlink" href="#content-delivery-and-object-storage" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li><p><a class="reference external" href="https://en.wikipedia.org/wiki/Content_delivery_network">Content Delivery Network or CDN</a></p></li>
+<li><p><a class="reference external" href="https://aws.amazon.com/s3/">Amazon S3</a></p></li>
+<li><p><a class="reference external" href="https://www.digitalocean.com/docs/spaces/">Digital Ocean Spaces</a></p></li>
+<li><p><a class="reference external" href="https://docs.min.io/">Open Source - minIO</a></p></li>
+</ul>
+</div>
+<hr class="docutils" />
+<div class="section" id="domains">
+<h3>Domains<a class="headerlink" href="#domains" title="Permalink to this headline">¶</a></h3>
+<img src="https://www.cloudflare.com/img/learning/dns/glossary/what-is-a-domain-name-registrar/registrar-flow.png"/>
+<img src="https://devopedia.org/images/article/104/8908.1549907765.png"/>
+<ul class="simple">
+<li><p><a class="reference external" href="https://www.icann.org/registrar-reports/accreditation-qualified-list.html">Descriptions and Contact Information for ICANN-Accredited Registrars</a></p></li>
+<li><p><a class="reference external" href="https://www.digitalocean.com/community/tutorials/how-to-point-to-digitalocean-nameservers-from-common-domain-registrars">How To Point to DigitalOcean Nameservers From Common Domain Registrars</a></p></li>
+</ul>
+<hr class="docutils" />
+</div>
+</div>
 </div>
 
     <script type="text/x-thebe-config">
@@ -262,7 +365,7 @@
         
         <div class='prev-next-bottom'>
             
-    <a class='left-prev' id="prev-link" href="june9.html" title="previous page">June 9 ~ Django ORM</a>
+    <a class='left-prev' id="prev-link" href="june9.html" title="previous page">June 9 ~ Django &amp; SQL</a>
 
         </div>
         
