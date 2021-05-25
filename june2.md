@@ -15,7 +15,7 @@ June 2 ~ HTML/CSS
 - [Flexbox Froggy](https://flexboxfroggy.com/)
 - [Flexbox Defense](http://www.flexboxdefense.com/)
 - [Grid Garden](https://cssgridgarden.com/)
-([src](https://twitter.com/girl_whocode/status/1392714963039383554?s=21))
+([src](https://twitter.com/girl_whocode/status/1392714963039383554?s=21))  
 
-![](_static/css_cheatsheet.png) 
+![css cheat sheet](_static/css_cheatsheet.png) 
 
