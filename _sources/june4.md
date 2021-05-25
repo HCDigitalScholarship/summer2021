@@ -100,8 +100,8 @@ add_fishes(fishes); // pass the array to the function
 
 __jQuery selectors__ 
 
-- `$(.class)` similar to `document.getElementByClassName('class');`
-- `$(#id)` similar to `document.getElementByID('class');`
+- `$('.class')` similar to `document.getElementByClassName('class');`
+- `$('#id')` similar to `document.getElementByID('class');`
 
 
 ---
