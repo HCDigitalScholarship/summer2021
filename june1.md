@@ -90,6 +90,10 @@ Now that you have Python and virtualenv or conda installed, we can start to expl
 
 ---
 
+![Ted Underwood's debugging rules https://twitter.com/Ted_Underwood/status/1388842971395764231](_static/debugging.png)
+
+---
+
 ## Moving or renaming files
 - `cp`
    - `<cp> <origin> <destination>`
