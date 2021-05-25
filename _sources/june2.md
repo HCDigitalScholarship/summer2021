@@ -17,5 +17,5 @@ June 2 ~ HTML/CSS
 - [Grid Garden](https://cssgridgarden.com/)
 ([src](https://twitter.com/girl_whocode/status/1392714963039383554?s=21))  
 
-![css cheat sheet](_static/css_cheatsheet.png) 
+![css cheat sheet, src https://twitter.com/mgechev/status/1397047289563295744](_static/css_cheatsheet.png) 
 
