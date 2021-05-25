@@ -9,9 +9,6 @@ June 2 ~ HTML/CSS
 - [How to Build a Website with CSS](https://www.digitalocean.com/community/tutorial_series/how-to-build-a-website-with-css)
 
 
-![](css_cheatsheet.png) 
-
-
 ## CSS Games 
 
 - [CSS Diner](http://flukeout.github.io/)
@@ -20,4 +17,5 @@ June 2 ~ HTML/CSS
 - [Grid Garden](https://cssgridgarden.com/)
 ([src](https://twitter.com/girl_whocode/status/1392714963039383554?s=21))
 
+![](_static/css_cheatsheet.png) 
 
