@@ -1,4 +1,4 @@
-June 9 ~ Django ORM
+June 9 ~ Django & SQL
 ============================
 
 ### The Journey of a Web Request in Django
@@ -188,7 +188,7 @@ Relational databases are built on three types of relationships:
 2. One-to-many
 3. Many-to-many
 
-<img src="er.png">
+<img src="_static/er.png">
 
 ### SQL 
 
