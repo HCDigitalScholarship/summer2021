@@ -40,7 +40,7 @@ To access GitHub, you will need to create an account. Go to: https://github.com/
 Once logged in, you can find our GitHub organization here: https://github.com/HCDigitalScholarship
 
 
-1. [Create a new Github repository](https://docs.github.com/en/github/getting-started-with-github/create-a-repo)
+1. [Create a new Github repository](https://docs.github.com/en/github/getting-started-with-github/create-a-repo). Be sure to check the box to "Add a README file." If you forget just follow the instructions in "…create a new repository on the command line." 
 
 2. [Add a new file](https://docs.github.com/en/github/managing-files-in-a-repository/creating-new-files) called `index.html`
 
