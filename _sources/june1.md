@@ -59,9 +59,11 @@ Once logged in, you can find our GitHub organization here: https://github.com/HC
 </html>
    ```
 4. Add a new blank file called `.nojekyll`
-5. [Enable Github pages](https://docs.github.com/en/github/working-with-github-pages/creating-a-github-pages-site#creating-your-site) in Settings and note your page's address
-6. When done, post your link on Slack. 
-7. Feel free to give your page some character and individuality. 
+5. [Enable Github pages](https://docs.github.com/en/github/working-with-github-pages/creating-a-github-pages-site#creating-your-site) in Settings
+
+6. Note the address where it says "Your site is ready to be published at "https://apjanco.github.io/summer-rocks/" 
+** Note that you may need to add index.html to the address at first ** 
+7. When done, post your link on Slack. Feel free to give your page some character and individuality. 
 
 
 ## Python
