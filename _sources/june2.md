@@ -7,13 +7,11 @@ June 2 ~ HTML/CSS
 
 - [How To Build a Website with HTML](https://www.digitalocean.com/community/tutorial_series/how-to-build-a-website-with-html)
 
-![](https://assets.digitalocean.com/articles/how-to-build-a-website-with-html/html-demo-site.gif)
 
 ---
 
 - [How to Build a Website with CSS](https://www.digitalocean.com/community/tutorial_series/how-to-build-a-website-with-css)
 
-![](https://assets.digitalocean.com/articles/how-to-build-a-website-with-css/css-demo-site.gif)
 
 
 ---
