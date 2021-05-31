@@ -9,6 +9,9 @@ June 2 ~ HTML/CSS
 - [How to Build a Website with CSS](https://www.digitalocean.com/community/tutorial_series/how-to-build-a-website-with-css)
 
 
+<blockquote class="twitter-tweet"><p lang="en" dir="ltr">HTML tags you&#39;re not using but you should know about<br><br>Believe it or not, there is more than just &lt;div&gt; 😉 <br><br>Start using these! <br><br>- &lt;header&gt;<br>- &lt;nav&gt;<br>- &lt;section&gt;<br>- &lt;article&gt;<br>- &lt;aside&gt;<br>- &lt;footer&gt;<br>- &lt;details&gt; &amp; &lt;summary&gt;<br><br>Examples below! 💯</p>&mdash; Eddy Vinck 👨‍💻 (@EddyVinckk) <a href="https://twitter.com/EddyVinckk/status/1398162131137204232?ref_src=twsrc%5Etfw">May 28, 2021</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+
+
 ## CSS Games 
 
 - [CSS Diner](http://flukeout.github.io/)
