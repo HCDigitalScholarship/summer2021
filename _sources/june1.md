@@ -42,9 +42,10 @@ Once logged in, you can find our GitHub organization here: https://github.com/HC
 
 1. [Create a new Github repository](https://docs.github.com/en/github/getting-started-with-github/create-a-repo). Be sure to check the box to "Add a README file." If you forget just follow the instructions in "…create a new repository on the command line." 
 
-2. [Add a new file](https://docs.github.com/en/github/managing-files-in-a-repository/creating-new-files) called `index.html`
+2. Request the [Student Developer Pack](https://education.github.com/pack) (optional, but gives you many good things for free)
+3. [Add a new file](https://docs.github.com/en/github/managing-files-in-a-repository/creating-new-files) called `index.html`
 
-3. You can start with the minimum needed then add your own content. 
+4. You can start with the minimum needed then add your own content. 
 ```html
  <!DOCTYPE html>
 <html>
@@ -58,12 +59,12 @@ Once logged in, you can find our GitHub organization here: https://github.com/HC
   </body>
 </html>
    ```
-4. Add a new blank file called `.nojekyll`
-5. [Enable Github pages](https://docs.github.com/en/github/working-with-github-pages/creating-a-github-pages-site#creating-your-site) in Settings
+5. Add a new blank file called `.nojekyll`
+6. [Enable Github pages](https://docs.github.com/en/github/working-with-github-pages/creating-a-github-pages-site#creating-your-site) in Settings
 
-6. Note the address where it says "Your site is ready to be published at "https://apjanco.github.io/summer-rocks/" 
+7. Note the address where it says "Your site is ready to be published at "https://apjanco.github.io/summer-rocks/" 
 ** Note that you may need to add index.html to the address at first ** 
-7. When done, post your link on Slack. Feel free to give your page some character and individuality. 
+8. When done, post your link on Slack. Feel free to give your page some character and individuality. 
 
 
 ## Python
