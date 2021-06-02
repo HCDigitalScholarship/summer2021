@@ -1,6 +1,28 @@
 June 3 ~ Design 
 ============================
 
+
+- [Essential Web Design Resources](https://designuptodate.com/essential-web-design-resources-you-must-know/)
+- [omatsuri](https://omatsuri.app/)
+
+
+Images 
+- [wikiview](https://wikiview.net/)
+
+Fonts 
+- [Google Fonts](https://fonts.google.com/)
+- [Variable Fonts](https://v-fonts.com/)
+
+Icons 
+
+- [Boostrap Icons](https://icons.getbootstrap.com/)
+- [Noun Project](https://thenounproject.com/)
+- [Font Awesome](https://fontawesome.com/icons?d=gallery&p=2)
+- [Boxicons](https://boxicons.com/)
+
+
+---
+
 <img src="https://www.tutorialrepublic.com/lib/images/bootstrap-illustration.png">
 
 [Bootstrap tutorial](https://getbootstrap.com/docs/4.1/getting-started/introduction/)
@@ -64,13 +86,6 @@ June 3 ~ Design
 
 
 - [Modal](https://getbootstrap.com/docs/5.0/components/modal/#modal-components)
-
-## Icons 
-
-- [Boostrap Icons](https://icons.getbootstrap.com/)
-- [Noun Project](https://thenounproject.com/)
-- [Font Awesome](https://fontawesome.com/icons?d=gallery&p=2)
-- [Boxicons](https://boxicons.com/)
 
 
 ## Bootstrap v5 Tutorial
