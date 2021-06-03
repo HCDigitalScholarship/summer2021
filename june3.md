@@ -92,6 +92,9 @@ Icons
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/rQryOSyfXmI" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
+## Bootstrap v4 Tutorial (LinkedIn Learning)
+- https://www.linkedin.com/learning/bootstrap-4-essential-training (this tutorial is accessible with your Haverford username and password)
+
 
 ## Boostrap Studio
 
