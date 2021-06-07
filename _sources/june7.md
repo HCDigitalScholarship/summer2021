@@ -5,6 +5,18 @@ June 7 ~ Request/Response
 
 <img src="https://hcwebdev.netlify.app/bboard.jpg">
 
+
+---
+
+<div class="audiodiv"><audio controls>
+<source src="https://oona.windytan.com/blogfiles/dialup.mp3" />
+[HTML5 audio: In-line recording of the beginning of a telephone call made by a modem.]
+</audio></div>
+  
+
+![](https://oona.windytan.com/posters/dialup-final.png)
+[More on modems](http://www.windytan.com/2012/11/the-sound-of-dialup-pictured.html)
+
 ---
 
 <img src="https://hcwebdev.netlify.app/dns-via-home-router2.jpg">
