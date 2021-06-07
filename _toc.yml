@@ -1,20 +1,16 @@
-# Table of content
-# Learn more at https://jupyterbook.org/customize/toc.html
-#
-- file: intro
-
-
-- part: Week One
+format: jb-book
+root: intro
+parts:
+- caption: Week One
   chapters:
-    - file: prep
-    - file: june1
-    - file: june2
-    - file: june3
-    - file: june4
-
-- part: Week Two
+  - file: prep
+  - file: june1
+  - file: june2
+  - file: june3
+  - file: june4
+- caption: Week Two
   chapters:
-    - file: june7
-    - file: june8
-    - file: june9
-    - file: june10
+  - file: june7
+  - file: june8
+  - file: june9
+  - file: june10
