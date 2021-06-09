@@ -1,6 +1,10 @@
 June 7 ~ Request/Response
 ============================
 
+The Internet  
+
+<video playsinline="true" src="https://media.wired.com/clips/603054d5d5aeee948f9055a6/720p/pass/security_internetmapping4k.mp4"></video>
+
 ---
 
 <img src="https://hcwebdev.netlify.app/bboard.jpg">

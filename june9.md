@@ -1,6 +1,39 @@
 June 9 ~ Django & SQL
 ============================
 
+### Why Django? 
+
+![](https://miro.medium.com/max/3150/2*WjlXOFmk0C6iDwd2e_pg8w.jpeg)  
+
+### FastAPI
+- fast
+- simple
+- very "pythonic" 
+- add the things that you need as you need them 
+
+
+![](https://camo.githubusercontent.com/7ccc9001911abc887cc1d71b3c3f642cf6eb1e6baf3009965f634258cc65a93e/68747470733a2f2f7261776769742e636f6d2f6c75697366656c697065372f4c6561726e696e672d446a616e676f2f6d61737465722f646a616e676f2e706e67)
+
+### Django
+- get all the things from the beginning
+- admin 
+- database 
+- users and user authentication 
+- search 
+- very modular
+
+---
+
+## Return of the MadLib Example 
+
+1. `git clone https://github.com/apjanco/django_example.git`
+2. `cd django_example`
+3. `pip install -r requirements.txt`
+4. `python manage.py migrate`
+5. `python manage.py runserver`
+
+--- 
+
 ### The Journey of a Web Request in Django
 
 <iframe width="100%" height="500" src="https://www.youtube.com/embed/RLo9RJhbOrQ" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
