@@ -9,6 +9,9 @@ June 9 ~ Django & SQL
 - fast
 - simple
 - very "pythonic" 
+- automatic /docs 
+- async and WebSockets
+- makes full use of Python typing
 - add the things that you need as you need them 
 
 
