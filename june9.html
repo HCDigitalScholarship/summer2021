@@ -232,44 +232,66 @@
             <nav id="bd-toc-nav">
                 <ul class="visible nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#the-journey-of-a-web-request-in-django">
-   The Journey of a Web Request in Django
+  <a class="reference internal nav-link" href="#why-django">
+   Why Django?
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#create-a-new-django-project">
-   Create a new Django project
+  <a class="reference internal nav-link" href="#fastapi">
+   FastAPI
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#urls">
-   URLS
+  <a class="reference internal nav-link" href="#django">
+   Django
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#views">
-   Views
+  <a class="reference internal nav-link" href="#return-of-the-madlib-example">
+   Return of the MadLib Example
   </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#models">
-   Models
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#adding-data">
-   Adding Data
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#manage-py-commands">
-   Manage.py commands
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#further-reading">
-   Further Reading
-  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#the-journey-of-a-web-request-in-django">
+     The Journey of a Web Request in Django
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#create-a-new-django-project">
+     Create a new Django project
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#urls">
+     URLS
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#views">
+     Views
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#models">
+     Models
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#adding-data">
+     Adding Data
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#manage-py-commands">
+     Manage.py commands
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#further-reading">
+     Further Reading
+    </a>
+   </li>
+  </ul>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#that-70s-database-language">
@@ -301,12 +323,48 @@
                 
   <div class="section" id="june-9-django-sql">
 <h1>June 9 ~ Django &amp; SQL<a class="headerlink" href="#june-9-django-sql" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="why-django">
+<h2>Why Django?<a class="headerlink" href="#why-django" title="Permalink to this headline">¶</a></h2>
+<p><img alt="" src="https://miro.medium.com/max/3150/2*WjlXOFmk0C6iDwd2e_pg8w.jpeg" /></p>
+</div>
+<div class="section" id="fastapi">
+<h2>FastAPI<a class="headerlink" href="#fastapi" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li><p>fast</p></li>
+<li><p>simple</p></li>
+<li><p>very “pythonic”</p></li>
+<li><p>add the things that you need as you need them</p></li>
+</ul>
+<p><img alt="" src="https://camo.githubusercontent.com/7ccc9001911abc887cc1d71b3c3f642cf6eb1e6baf3009965f634258cc65a93e/68747470733a2f2f7261776769742e636f6d2f6c75697366656c697065372f4c6561726e696e672d446a616e676f2f6d61737465722f646a616e676f2e706e67" /></p>
+</div>
+<div class="section" id="django">
+<h2>Django<a class="headerlink" href="#django" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li><p>get all the things from the beginning</p></li>
+<li><p>admin</p></li>
+<li><p>database</p></li>
+<li><p>users and user authentication</p></li>
+<li><p>search</p></li>
+<li><p>very modular</p></li>
+</ul>
+</div>
+<hr class="docutils" />
+<div class="section" id="return-of-the-madlib-example">
+<h2>Return of the MadLib Example<a class="headerlink" href="#return-of-the-madlib-example" title="Permalink to this headline">¶</a></h2>
+<ol class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">clone</span> <span class="pre">https://github.com/apjanco/django_example.git</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">cd</span> <span class="pre">django_example</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">pip</span> <span class="pre">install</span> <span class="pre">-r</span> <span class="pre">requirements.txt</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">python</span> <span class="pre">manage.py</span> <span class="pre">migrate</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">python</span> <span class="pre">manage.py</span> <span class="pre">runserver</span></code></p></li>
+</ol>
+<hr class="docutils" />
 <div class="section" id="the-journey-of-a-web-request-in-django">
-<h2>The Journey of a Web Request in Django<a class="headerlink" href="#the-journey-of-a-web-request-in-django" title="Permalink to this headline">¶</a></h2>
+<h3>The Journey of a Web Request in Django<a class="headerlink" href="#the-journey-of-a-web-request-in-django" title="Permalink to this headline">¶</a></h3>
 <iframe width="100%" height="500" src="https://www.youtube.com/embed/RLo9RJhbOrQ" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 </div>
 <div class="section" id="create-a-new-django-project">
-<h2>Create a new Django project<a class="headerlink" href="#create-a-new-django-project" title="Permalink to this headline">¶</a></h2>
+<h3>Create a new Django project<a class="headerlink" href="#create-a-new-django-project" title="Permalink to this headline">¶</a></h3>
 <p>In the virtual environment <code class="docutils literal notranslate"><span class="pre">pip</span> <span class="pre">install</span> <span class="pre">django</span></code>.  If you need a specific version <code class="docutils literal notranslate"><span class="pre">pip</span> <span class="pre">install</span> <span class="pre">django==2.0.1</span></code></p>
 <ul class="simple">
 <li><p>Create a new Django project with <code class="docutils literal notranslate"><span class="pre">django-admin</span> <span class="pre">startproject</span> <span class="pre">project_name</span></code>.  This will create a folder for the project with <code class="docutils literal notranslate"><span class="pre">manage.py</span></code>.  I’ll refer to this going forward as the <code class="docutils literal notranslate"><span class="pre">project</span> <span class="pre">directory</span></code>.  You’ll find <code class="docutils literal notranslate"><span class="pre">settings.py</span></code> and <code class="docutils literal notranslate"><span class="pre">urls.py</span></code> in a subdirectory of the project directory.</p></li>
@@ -331,7 +389,7 @@
 </div>
 </div>
 <div class="section" id="urls">
-<h2>URLS<a class="headerlink" href="#urls" title="Permalink to this headline">¶</a></h2>
+<h3>URLS<a class="headerlink" href="#urls" title="Permalink to this headline">¶</a></h3>
 <p><em><a class="reference external" href="http://urls.py">urls.py</a></em></p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">django.urls</span> <span class="kn">import</span> <span class="n">include</span><span class="p">,</span> <span class="n">path</span>
 
@@ -344,7 +402,7 @@
 </div>
 </div>
 <div class="section" id="views">
-<h2>Views<a class="headerlink" href="#views" title="Permalink to this headline">¶</a></h2>
+<h3>Views<a class="headerlink" href="#views" title="Permalink to this headline">¶</a></h3>
 <p><a class="reference external" href="https://docs.djangoproject.com/en/3.0/topics/http/views/">Function-based view</a></p>
 <p><em><a class="reference external" href="http://views.py">views.py</a></em></p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">django.shortcuts</span> <span class="kn">import</span> <span class="n">render</span>
@@ -374,7 +432,7 @@
 </div>
 </div>
 <div class="section" id="models">
-<h2>Models<a class="headerlink" href="#models" title="Permalink to this headline">¶</a></h2>
+<h3>Models<a class="headerlink" href="#models" title="Permalink to this headline">¶</a></h3>
 <ol class="simple">
 <li><p><a class="reference external" href="https://docs.djangoproject.com/en/3.0/topics/db/models/">Django models docs</a></p></li>
 <li><p><a class="reference external" href="https://developer.mozilla.org/en-US/docs/Learn/Server-side/Django/Models">Mozilla on Django Models</a></p></li>
@@ -394,7 +452,7 @@
 </div>
 </div>
 <div class="section" id="adding-data">
-<h2>Adding Data<a class="headerlink" href="#adding-data" title="Permalink to this headline">¶</a></h2>
+<h3>Adding Data<a class="headerlink" href="#adding-data" title="Permalink to this headline">¶</a></h3>
 <p>Open the project shell.
 <code class="docutils literal notranslate"><span class="pre">$</span> <span class="pre">python</span> <span class="pre">manage.py</span> <span class="pre">shell</span></code></p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span> <span class="nn">myapp.models</span> <span class="kn">import</span> <span class="n">goto</span>
@@ -407,7 +465,7 @@
 <p>See also <a class="reference external" href="https://docs.djangoproject.com/en/3.0/howto/initial-data/#providing-initial-data-for-models">loaddata and fixtures</a></p>
 </div>
 <div class="section" id="manage-py-commands">
-<h2><a class="reference external" href="http://Manage.py">Manage.py</a> commands<a class="headerlink" href="#manage-py-commands" title="Permalink to this headline">¶</a></h2>
+<h3><a class="reference external" href="http://Manage.py">Manage.py</a> commands<a class="headerlink" href="#manage-py-commands" title="Permalink to this headline">¶</a></h3>
 <p>Run a local server
 <code class="docutils literal notranslate"><span class="pre">python</span> <span class="pre">manage.py</span> <span class="pre">runserver</span></code></p>
 <p>Update the db schema based on <a class="reference external" href="http://models.py">models.py</a>
@@ -436,7 +494,7 @@
 </div>
 </div>
 <div class="section" id="further-reading">
-<h2>Further Reading<a class="headerlink" href="#further-reading" title="Permalink to this headline">¶</a></h2>
+<h3>Further Reading<a class="headerlink" href="#further-reading" title="Permalink to this headline">¶</a></h3>
 <ul class="simple">
 <li><p><a class="reference external" href="https://developer.mozilla.org/en-US/docs/Learn/Server-side/Django">Mozilla Django Tutorial</a></p></li>
 <li><p><a class="reference external" href="https://realpython.com/get-started-with-django-1/">Real Python</a></p></li>
@@ -451,6 +509,7 @@
 <li><p><a class="reference external" href="https://github.com/HCDigitalScholarship/ds-cookbook/tree/master/django-import-export">Import and Export data in Admin</a></p></li>
 <li><p><a class="reference external" href="https://github.com/HCDigitalScholarship/ds-cookbook/tree/master/datatables-server-side-processing">DataTables: Server Side Processing</a></p></li>
 </ul>
+</div>
 </div>
 <div class="section" id="that-70s-database-language">
 <h2>That ’70s Database Language<a class="headerlink" href="#that-70s-database-language" title="Permalink to this headline">¶</a></h2>
